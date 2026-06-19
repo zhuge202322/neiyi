@@ -47,7 +47,7 @@ export const products = [
     description:
       "Comfort-led everyday collections made for repeat programs, private labels, and retail-ready assortments.",
     icon: Shirt,
-    image: "/assets/showroom.png",
+    image: "/assets/requested-products/panty-color-set.jpg",
   },
   {
     title: "Bras",
@@ -82,7 +82,7 @@ export const products = [
     description:
       "Relaxed knitted apparel and related products designed for lifestyle, value, and replenishment demand.",
     icon: Scissors,
-    image: "/assets/office.jpg",
+    image: "/assets/requested-products/seamless-panties.jpg",
   },
 ];
 

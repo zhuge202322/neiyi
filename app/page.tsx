@@ -20,7 +20,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-media" aria-hidden="true">
           <Image
-            src="/assets/requested-factory/showroom-wide.jpg"
+            src="/assets/showroom.png"
             alt=""
             fill
             sizes="100vw"
@@ -60,10 +60,10 @@ export default function Home() {
       </section>
 
       <section className="home-about split-section">
-        <div className="split-media" data-animate="reveal">
+        <div className="split-media">
           <Image
-            src="/assets/requested-factory/showroom-detail.jpg"
-            alt="Winsun showroom and sourcing meeting area"
+            src="/assets/office.jpg"
+            alt="Winsun office team"
             fill
             sizes="(min-width: 900px) 50vw, 100vw"
           />

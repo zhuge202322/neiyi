@@ -1,7 +1,8 @@
-import { Mail, MapPin, MessageCircle } from "lucide-react";
+import { CheckCircle2, Mail, MapPin, MessageCircle } from "lucide-react";
 import { GsapProvider } from "@/components/GsapProvider";
 import { InquiryForm } from "@/components/InquiryForm";
-import { company } from "@/lib/site-data";
+import { SectionHeading } from "@/components/SectionHeading";
+import { certifications, company, whyChooseWinsun } from "@/lib/site-data";
 
 export default function ContactPage() {
   return (
@@ -43,6 +44,43 @@ export default function ContactPage() {
         </div>
         <div data-animate="fade-up">
           <InquiryForm />
+        </div>
+      </section>
+
+      <section className="section certification-section">
+        <SectionHeading
+          eyebrow="Certifications"
+          title="Inspection documents and test reports can support buyer review."
+          text="Final documentation depends on order requirements, fabric choice, destination market, and buyer compliance needs."
+          align="center"
+        />
+        <div className="certification-grid">
+          {certifications.map((item) => {
+            const Icon = item.icon;
+            return (
+              <article className="certification-card" key={item.title} data-animate="fade-up">
+                <Icon size={26} />
+                <h2>{item.title}</h2>
+                <p>{item.text}</p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="section why-section">
+        <SectionHeading
+          eyebrow="Why Choose Winsun"
+          title="Clear reasons for buyers who need a reliable underwear factory partner."
+          align="center"
+        />
+        <div className="why-grid">
+          {whyChooseWinsun.map((item) => (
+            <div key={item} data-animate="fade-up">
+              <CheckCircle2 size={19} />
+              <span>{item}</span>
+            </div>
+          ))}
         </div>
       </section>
     </GsapProvider>

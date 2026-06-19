@@ -11,6 +11,7 @@ export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const forceSolid = pathname.startsWith("/products/") && pathname !== "/products";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -24,7 +25,7 @@ export function Header() {
   }, [pathname]);
 
   return (
-    <header className={`site-header ${scrolled ? "site-header--solid" : ""}`}>
+    <header className={`site-header ${scrolled || forceSolid ? "site-header--solid" : ""}`}>
       <Link href="/" className="brand" aria-label={`${company.name} home`}>
         <Image src="/assets/winsun-logo.png" alt="" width={128} height={72} priority />
         <span>{company.name}</span>
