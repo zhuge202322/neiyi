@@ -26,12 +26,22 @@ export function InquiryForm() {
       </div>
       <div className="form-grid">
         <label>
+          Country
+          <input name="country" type="text" placeholder="Country / market" />
+        </label>
+        <label>
           Email
           <input name="email" type="email" placeholder="name@company.com" required />
         </label>
+      </div>
+      <div className="form-grid">
         <label>
           WhatsApp
           <input name="whatsapp" type="tel" placeholder="+1 000 000 0000" />
+        </label>
+        <label>
+          Quantity
+          <input name="quantity" type="text" placeholder="e.g. 2,000 pcs / colour" />
         </label>
       </div>
       <label>
@@ -47,6 +57,10 @@ export function InquiryForm() {
           <option>Thermal Wear</option>
           <option>Loungewear</option>
         </select>
+      </label>
+      <label>
+        Target Price
+        <input name="targetPrice" type="text" placeholder="Target price or price range" />
       </label>
       <label>
         Project Details

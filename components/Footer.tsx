@@ -50,7 +50,7 @@ export function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} {company.name}</span>
+        <span>(C) {new Date().getFullYear()} {company.name}</span>
         <span>Private label underwear manufacturing since {company.established}</span>
       </div>
     </footer>

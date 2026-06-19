@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { CtaBand } from "@/components/CtaBand";
 import { GsapProvider } from "@/components/GsapProvider";
 import { SectionHeading } from "@/components/SectionHeading";
-import { products } from "@/lib/site-data";
+import { certifications, productFamilies, products, quickFacts } from "@/lib/site-data";
 
 const productSupport = [
   "Private label development",
@@ -21,15 +21,49 @@ export default function ProductsPage() {
       <section className="page-hero page-hero--products">
         <div>
           <span className="eyebrow">Product Range</span>
-          <h1>Underwear and knitted apparel made for global B2B programs.</h1>
+          <h1>OEM & ODM bra, panty, shapewear, and thermal wear manufacturing.</h1>
           <p>
-            From essential daily underwear to seasonal thermal and loungewear lines, Winsun supports
-            practical product development with production-ready execution.
+            From essential underwear to structured shapewear and seasonal thermal sets, Winsun
+            supports private label buyers with practical sampling and production execution.
           </p>
         </div>
       </section>
 
       <section className="section">
+        <SectionHeading
+          eyebrow="Product Contents"
+          title="Detailed product categories for underwear sourcing programs."
+          text="The following styles match the requested catalog direction and can be adapted by fabric, color, label, packing, and target market."
+          align="center"
+        />
+        <div className="product-family-stack">
+          {productFamilies.map((family) => (
+            <section className="product-family" key={family.title} data-animate="fade-up">
+              <div className="product-family__intro">
+                <h2>{family.title}</h2>
+                <p>{family.description}</p>
+              </div>
+              <div className="product-family__grid">
+                {family.products.map((item) => (
+                  <article className="product-style-card" key={item.name}>
+                    <div className="product-style-card__image">
+                      <Image src={item.image} alt={item.name} fill sizes="(min-width: 900px) 25vw, 50vw" />
+                    </div>
+                    <h3>{item.name}</h3>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+      </section>
+
+      <section className="section section--muted">
+        <SectionHeading
+          eyebrow="Core Programs"
+          title="Flexible category support for buyer-led product planning."
+          align="center"
+        />
         <div className="catalog-grid">
           {products.map((item) => {
             const Icon = item.icon;
@@ -52,6 +86,20 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      <section className="quick-facts-band quick-facts-band--light" aria-label="Product quick facts">
+        <div className="quick-facts-card" data-animate="fade-up">
+          <span className="eyebrow">Quick Facts</span>
+          <div className="quick-facts-grid">
+            {quickFacts.map((item) => (
+              <div key={item.item}>
+                <span>{item.item}</span>
+                <strong>{item.details}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="split-section">
         <div className="split-copy" data-animate="fade-up">
           <span className="eyebrow">Buyer Support</span>
@@ -71,13 +119,25 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section certification-section">
         <SectionHeading
-          eyebrow="Materials & Direction"
-          title="Comfort, fit, and commercial practicality stay at the center."
-          text="Final specifications depend on buyer requirements, target price, market, fabric choice, MOQ, packaging, and delivery timing."
+          eyebrow="Certifications"
+          title="Inspection documents and test reports can support buyer review."
+          text="Final documentation depends on order requirements, fabric choice, destination market, and buyer compliance needs."
           align="center"
         />
+        <div className="certification-grid">
+          {certifications.map((item) => {
+            const Icon = item.icon;
+            return (
+              <article className="certification-card" key={item.title} data-animate="fade-up">
+                <Icon size={26} />
+                <h2>{item.title}</h2>
+                <p>{item.text}</p>
+              </article>
+            );
+          })}
+        </div>
       </section>
 
       <CtaBand />

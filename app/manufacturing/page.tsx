@@ -4,12 +4,13 @@ import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { GsapProvider } from "@/components/GsapProvider";
 import { SectionHeading } from "@/components/SectionHeading";
+import { factoryStrength } from "@/lib/site-data";
 
 const scenes = [
   {
     title: "Office Coordination",
     text: "Dedicated business communication and project follow-up for overseas clients.",
-    image: "/assets/office.jpg",
+    image: "/assets/requested-factory/office-room.jpg",
     icon: Building2,
   },
   {
@@ -21,19 +22,19 @@ const scenes = [
   {
     title: "Showroom",
     text: "Category presentation and style reference support for product discussions.",
-    image: "/assets/showroom.png",
+    image: "/assets/requested-factory/showroom-detail.jpg",
     icon: Shirt,
   },
   {
     title: "Warehouse",
     text: "Organized materials and finished goods support for production planning.",
-    image: "/assets/warehouse.png",
+    image: "/assets/requested-factory/material-storage.jpg",
     icon: Warehouse,
   },
   {
-    title: "Knitting Room",
-    text: "Knitted production resources for thermal wear and related apparel.",
-    image: "/assets/knitting-room.png",
+    title: "Material Storage",
+    text: "Organized fabric and material storage for order preparation.",
+    image: "/assets/requested-factory/storage-aisle.jpg",
     icon: Boxes,
   },
 ];
@@ -60,6 +61,28 @@ export default function ManufacturingPage() {
         </div>
         <div className="factory-video-frame">
           <video src="/assets/factory-video.mp4" poster="/assets/sewing-workshop.png" controls muted playsInline />
+        </div>
+      </section>
+
+      <section className="section section--muted">
+        <SectionHeading
+          eyebrow="Factory Strength"
+          title="Factory resources built for stable underwear manufacturing."
+          text="The production side is organized around capacity, experienced workers, line coordination, and export service."
+          align="center"
+        />
+        <div className="strength-grid">
+          {factoryStrength.map((item) => {
+            const Icon = item.icon;
+            return (
+              <article className="strength-card" key={item.label} data-animate="fade-up">
+                <Icon size={22} />
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+                <p>{item.text}</p>
+              </article>
+            );
+          })}
         </div>
       </section>
 

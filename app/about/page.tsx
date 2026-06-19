@@ -3,7 +3,7 @@ import { MapPin } from "lucide-react";
 import { CtaBand } from "@/components/CtaBand";
 import { GsapProvider } from "@/components/GsapProvider";
 import { SectionHeading } from "@/components/SectionHeading";
-import { company, stats, values } from "@/lib/site-data";
+import { company, factoryStrength, values } from "@/lib/site-data";
 
 export default function AboutPage() {
   return (
@@ -39,13 +39,23 @@ export default function AboutPage() {
       </section>
 
       <section className="section section--muted">
-        <div className="stats-strip stats-strip--inline">
-          {stats.map((item) => (
-            <div key={item.label} data-animate="fade-up">
-              <strong>{item.value}</strong>
-              <span>{item.label}</span>
-            </div>
-          ))}
+        <SectionHeading
+          eyebrow="Factory Strength"
+          title="Production resources for long-term underwear buyers."
+          align="center"
+        />
+        <div className="strength-grid">
+          {factoryStrength.map((item) => {
+            const Icon = item.icon;
+            return (
+              <article className="strength-card" key={item.label} data-animate="fade-up">
+                <Icon size={22} />
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+                <p>{item.text}</p>
+              </article>
+            );
+          })}
         </div>
       </section>
 

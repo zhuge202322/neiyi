@@ -7,3 +7,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+.codex-*
+/修改意见.docx
