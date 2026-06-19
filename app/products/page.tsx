@@ -45,12 +45,18 @@ export default function ProductsPage() {
               </div>
               <div className="product-family__grid">
                 {family.products.map((item) => (
-                  <article className="product-style-card" key={item.name}>
+                  <Link className="product-style-card" href={`/products/${item.slug}`} key={item.slug}>
                     <div className="product-style-card__image">
                       <Image src={item.image} alt={item.name} fill sizes="(min-width: 900px) 25vw, 50vw" />
                     </div>
-                    <h3>{item.name}</h3>
-                  </article>
+                    <div className="product-style-card__body">
+                      <h3>{item.name}</h3>
+                      <p>{item.summary}</p>
+                      <span>
+                        View Details <ArrowRight size={15} />
+                      </span>
+                    </div>
+                  </Link>
                 ))}
               </div>
             </section>

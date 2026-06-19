@@ -202,38 +202,140 @@ export const productFamilies = [
     title: "Bras",
     description: "Everyday and market-ready bra styles for OEM and ODM development.",
     products: [
-      { name: "Seamless Bra", image: "/assets/requested-products/seamless-bra.jpg" },
-      { name: "Sports Bra", image: "/assets/requested-products/sports-bra.jpg" },
-      { name: "Lace Bra", image: "/assets/requested-products/lace-bra.jpg" },
+      {
+        name: "Seamless Bra",
+        slug: "seamless-bra",
+        image: "/assets/requested-products/seamless-bra.jpg",
+        summary: "Smooth daily bra programs for private labels seeking clean lines and comfort.",
+        highlights: ["Seamless look", "Soft stretch hand feel", "Private label colorways"],
+      },
+      {
+        name: "Sports Bra",
+        slug: "sports-bra",
+        image: "/assets/requested-products/sports-bra.jpg",
+        summary: "Supportive active bra development for fitness, lounge, and athleisure buyers.",
+        highlights: ["Active support", "Moisture-friendly fabrics", "Elastic and logo options"],
+      },
+      {
+        name: "Wireless Bra",
+        slug: "wireless-bra",
+        image: "/assets/requested-products/wireless-bra.jpg",
+        summary: "Wire-free comfort bra styles for everyday retail and replenishment programs.",
+        highlights: ["Wire-free comfort", "Smooth cup direction", "Daily wear positioning"],
+      },
+      {
+        name: "Lace Bra",
+        slug: "lace-bra",
+        image: "/assets/requested-products/lace-bra.jpg",
+        summary: "Feminine lace bra options for seasonal assortments and private label ranges.",
+        highlights: ["Lace styling", "Multiple color options", "Retail packaging support"],
+      },
     ],
   },
   {
     title: "Panties",
     description: "Core panty programs for private labels, retail buyers, and repeat orders.",
     products: [
-      { name: "Cotton Panties", image: "/assets/requested-products/cotton-panties.jpg" },
-      { name: "Seamless Panties", image: "/assets/requested-products/seamless-panties.jpg" },
-      { name: "High Waist Panties", image: "/assets/requested-products/high-waist-panties.jpg" },
+      {
+        name: "Cotton Panties",
+        slug: "cotton-panties",
+        image: "/assets/requested-products/cotton-panties.jpg",
+        summary: "Core cotton panty programs for everyday underwear collections.",
+        highlights: ["Cotton-rich direction", "Daily comfort", "Size set planning"],
+      },
+      {
+        name: "Seamless Panties",
+        slug: "seamless-panties",
+        image: "/assets/requested-products/seamless-panties.jpg",
+        summary: "Smooth panty styles for invisible-feel retail ranges and value packs.",
+        highlights: ["Smooth edge direction", "Multi-pack colors", "Soft stretch fabrics"],
+      },
+      {
+        name: "Panty Color Set",
+        slug: "panty-color-set",
+        image: "/assets/requested-products/panty-color-set.jpg",
+        summary: "Assorted color panty sets for retail packs, online bundles, and promotions.",
+        highlights: ["Color assortment", "Pack development", "Label and polybag support"],
+      },
+      {
+        name: "High Waist Panties",
+        slug: "high-waist-panties",
+        image: "/assets/requested-products/high-waist-panties.jpg",
+        summary: "High waist silhouettes for comfort, coverage, and shaping-inspired programs.",
+        highlights: ["High waist fit", "Coverage-focused", "Comfort waistband options"],
+      },
     ],
   },
   {
     title: "Thermal Wear",
     description: "Warm base-layer sets for seasonal and cooler-market programs.",
     products: [
-      { name: "Men's Thermal Set", image: "/assets/requested-products/mens-thermal-set.jpg" },
-      { name: "Women's Thermal Set", image: "/assets/requested-products/womens-thermal-set.jpg" },
+      {
+        name: "Men's Thermal Set",
+        slug: "mens-thermal-set",
+        image: "/assets/requested-products/mens-thermal-set.jpg",
+        summary: "Men's warm base-layer sets for winter retail and export programs.",
+        highlights: ["Warm base layer", "Set packaging", "Seasonal order planning"],
+      },
+      {
+        name: "Men's Thermal Black Set",
+        slug: "mens-thermal-black-set",
+        image: "/assets/requested-products/mens-thermal-black.jpg",
+        summary: "Black men's thermal set option for practical winter underwear ranges.",
+        highlights: ["Dark colorway", "Long sleeve and pant set", "Bulk order support"],
+      },
+      {
+        name: "Women's Thermal Set",
+        slug: "womens-thermal-set",
+        image: "/assets/requested-products/womens-thermal-set.jpg",
+        summary: "Women's fitted thermal sets for cooler-market daily wear programs.",
+        highlights: ["Women's fit direction", "Warm hand feel", "Color and size planning"],
+      },
     ],
   },
   {
     title: "Shapewear",
     description: "Supportive shapewear ranges built around comfort, structure, and fit.",
     products: [
-      { name: "Bodysuit", image: "/assets/requested-products/bodysuit.jpg" },
-      { name: "Waist Trainer", image: "/assets/requested-products/waist-trainer.jpg" },
-      { name: "Shaping Shorts", image: "/assets/requested-products/shaping-shorts.jpg" },
+      {
+        name: "Bodysuit",
+        slug: "bodysuit",
+        image: "/assets/requested-products/bodysuit.jpg",
+        summary: "One-piece shapewear bodysuit development for smooth support collections.",
+        highlights: ["One-piece support", "Smooth body line", "Private label trim options"],
+      },
+      {
+        name: "Waist Trainer",
+        slug: "waist-trainer",
+        image: "/assets/requested-products/waist-trainer.jpg",
+        summary: "Waist support styles for structured shapewear and body shaping programs.",
+        highlights: ["Waist support", "Hook and closure options", "Elastic strength planning"],
+      },
+      {
+        name: "Shapewear Set",
+        slug: "shapewear-set",
+        image: "/assets/requested-products/shapewear-set.jpg",
+        summary: "Coordinated shapewear set options for waist and thigh support programs.",
+        highlights: ["Coordinated set", "Support zones", "Retail-ready presentation"],
+      },
+      {
+        name: "Shaping Shorts",
+        slug: "shaping-shorts",
+        image: "/assets/requested-products/shaping-shorts.jpg",
+        summary: "Shaping shorts for smoothing, support, and comfort-led bodywear ranges.",
+        highlights: ["Thigh coverage", "Smooth support", "Comfort waistband direction"],
+      },
     ],
   },
 ];
+
+export const productDetails = productFamilies.flatMap((family) =>
+  family.products.map((product) => ({
+    ...product,
+    family: family.title,
+    familyDescription: family.description,
+  })),
+);
 
 export const processSteps = [
   "Inquiry & requirement review",
