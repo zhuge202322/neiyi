@@ -35,9 +35,10 @@ export const company = {
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
-  { label: "OEM / ODM", href: "/oem-odm" },
-  { label: "Manufacturing", href: "/manufacturing" },
-  { label: "About", href: "/about" },
+  { label: "OEM Service", href: "/oem-odm" },
+  { label: "Factory", href: "/manufacturing" },
+  { label: "Certificates", href: "/certificates" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -175,13 +176,36 @@ export const quickFacts = [
 ];
 
 export const whyChooseWinsun = [
-  "Factory Since 2015",
-  "OEM & ODM Service",
-  "Small MOQ Available",
-  "Fast Sampling",
-  "Stable Delivery",
-  "Quality Inspection Before Shipment",
-  "Private Label Support",
+  {
+    title: "Factory Direct Pricing",
+    text: "Competitive pricing without middlemen.",
+    icon: Factory,
+  },
+  {
+    title: "OEM & ODM Service",
+    text: "Custom logo, packaging and design support.",
+    icon: PenTool,
+  },
+  {
+    title: "Low MOQ",
+    text: "Suitable for startups and growing brands.",
+    icon: Layers3,
+  },
+  {
+    title: "Strict Quality Control",
+    text: "100% inspection before shipment.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Fast Sampling",
+    text: "Sample delivery within 7-10 days.",
+    icon: Clock3,
+  },
+  {
+    title: "On-time Delivery",
+    text: "Reliable production schedule.",
+    icon: Truck,
+  },
 ];
 
 export const certifications = [
@@ -194,6 +218,16 @@ export const certifications = [
     title: "Quality Inspection Reports",
     text: "Pre-shipment inspection records support clearer quality control and buyer review.",
     icon: ShieldCheck,
+  },
+  {
+    title: "Packaging & Label Records",
+    text: "Private label, barcode, polybag, carton mark, and export packing details can be coordinated before shipment.",
+    icon: PackageCheck,
+  },
+  {
+    title: "Buyer Compliance Support",
+    text: "Documentation can be prepared according to buyer, order, fabric, and destination market requirements.",
+    icon: BadgeCheck,
   },
 ];
 
@@ -338,12 +372,36 @@ export const productDetails = productFamilies.flatMap((family) =>
 );
 
 export const processSteps = [
-  "Inquiry & requirement review",
-  "Fabric, style, and quotation confirmation",
-  "Sampling and fit refinement",
-  "Bulk production planning",
-  "Quality follow-up and packaging",
-  "Export coordination and after-sales support",
+  "Send Inquiry",
+  "Confirm Design",
+  "Sample Development",
+  "Sample Approval",
+  "Mass Production",
+  "Quality Inspection",
+  "Shipment",
+];
+
+export const faqItems = [
+  {
+    question: "What is your MOQ?",
+    answer: "MOQ depends on product type and customization requirements.",
+  },
+  {
+    question: "Can you do custom logo?",
+    answer: "Yes, OEM and private label services are available.",
+  },
+  {
+    question: "How long is sample time?",
+    answer: "Usually 7-10 days.",
+  },
+  {
+    question: "How long is production time?",
+    answer: "Approximately 25-40 days.",
+  },
+  {
+    question: "Which countries do you export to?",
+    answer: "Europe, Russia, North America, Southeast Asia and more.",
+  },
 ];
 
 export const values = [
@@ -361,5 +419,32 @@ export const values = [
     title: "Long-Term Cooperation",
     text: "We build steady buyer relationships through clear communication and reliable execution.",
     icon: Handshake,
+  },
+];
+
+export const blogPosts = [
+  {
+    title: "How to Prepare an OEM Underwear Inquiry",
+    category: "OEM Guide",
+    excerpt:
+      "The fastest quotations usually include style references, fabric direction, size range, logo needs, packaging requests, and target quantity.",
+  },
+  {
+    title: "Choosing Fabrics for Bras, Panties, and Shapewear",
+    category: "Product Development",
+    excerpt:
+      "Comfort, elasticity, opacity, hand feel, and recovery performance should be reviewed early before sampling and bulk production.",
+  },
+  {
+    title: "Private Label Packaging for Export Orders",
+    category: "Packaging",
+    excerpt:
+      "Labels, hang tags, polybags, cartons, barcode stickers, and size assortments should be confirmed before production planning.",
+  },
+  {
+    title: "What Buyers Should Check Before Bulk Production",
+    category: "Quality Control",
+    excerpt:
+      "Approved samples, color standards, measurements, trims, packing method, and inspection points help reduce production risk.",
   },
 ];

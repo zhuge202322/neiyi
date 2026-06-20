@@ -116,7 +116,7 @@ export default function OemOdmPage() {
 
       <section className="section">
         <div className="shipment-flow">
-          {processSteps.slice(0, 6).map((item, index) => {
+          {processSteps.map((item, index) => {
             const Icon = index < 2 ? ClipboardCheck : index < 4 ? Package : Truck;
             return (
               <div key={item} data-animate="fade-up">

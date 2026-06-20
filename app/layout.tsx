@@ -17,9 +17,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Underwear Manufacturer in China | OEM & ODM Bra, Panty & Shapewear Factory",
+  title: "OEM & ODM Underwear Manufacturer in China | Bras, Panties & Shapewear Factory",
   description:
-    "Hong Kong Winsun Co., Limited is an underwear manufacturer in China offering OEM and ODM bra, panty, shapewear, thermal wear, and private label production for global buyers.",
+    "Winsun is a professional underwear manufacturer providing OEM, ODM and private label services for bras, panties, shapewear, thermal wear and loungewear. Factory established in 2015 with global export experience.",
 };
 
 export default function RootLayout({

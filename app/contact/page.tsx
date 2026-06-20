@@ -1,4 +1,4 @@
-import { CheckCircle2, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Mail, MapPin, MessageCircle } from "lucide-react";
 import { GsapProvider } from "@/components/GsapProvider";
 import { InquiryForm } from "@/components/InquiryForm";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -75,12 +75,18 @@ export default function ContactPage() {
           align="center"
         />
         <div className="why-grid">
-          {whyChooseWinsun.map((item) => (
-            <div key={item} data-animate="fade-up">
-              <CheckCircle2 size={19} />
-              <span>{item}</span>
-            </div>
-          ))}
+          {whyChooseWinsun.map((item) => {
+            const Icon = item.icon;
+            return (
+              <article key={item.title} data-animate="fade-up">
+                <Icon size={22} />
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
     </GsapProvider>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Factory, Sparkles } from "lucide-react";
+import { ArrowRight, Factory, Sparkles } from "lucide-react";
 import { CtaBand } from "@/components/CtaBand";
 import { GsapProvider } from "@/components/GsapProvider";
 import { GlobalSalesNetwork } from "@/components/GlobalSalesNetwork";
@@ -8,6 +8,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import {
   company,
   factoryStrength,
+  faqItems,
   products,
   processSteps,
   quickFacts,
@@ -20,7 +21,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-media" aria-hidden="true">
           <Image
-            src="/assets/showroom.png"
+            src="/assets/hero-winsun-showroom.jpg"
             alt=""
             fill
             sizes="100vw"
@@ -148,16 +149,22 @@ export default function Home() {
       <section className="section why-section">
         <SectionHeading
           eyebrow="Why Choose Winsun"
-          title="Clear reasons for buyers who need a reliable underwear factory partner."
+          title="Factory-direct support for private label underwear buyers."
           align="center"
         />
         <div className="why-grid">
-          {whyChooseWinsun.map((item) => (
-            <div key={item} data-animate="fade-up">
-              <CheckCircle2 size={19} />
-              <span>{item}</span>
-            </div>
-          ))}
+          {whyChooseWinsun.map((item) => {
+            const Icon = item.icon;
+            return (
+              <article key={item.title} data-animate="fade-up">
+                <Icon size={22} />
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
 
@@ -165,9 +172,10 @@ export default function Home() {
 
       <section className="section">
         <SectionHeading
-          eyebrow="How We Work"
-          title="A clear workflow from inquiry to shipment."
+          eyebrow="OEM Process"
+          title="How We Work"
           text="Buyers can start with a tech pack, reference sample, artwork, or a target product range."
+          align="center"
         />
         <div className="timeline">
           {processSteps.map((step, index) => (
@@ -175,6 +183,23 @@ export default function Home() {
               <span>{String(index + 1).padStart(2, "0")}</span>
               <p>{step}</p>
             </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section section--muted faq-section">
+        <SectionHeading
+          eyebrow="FAQ"
+          title="Frequently Asked Questions"
+          text="Quick answers for buyers preparing OEM, ODM, and private label underwear projects."
+          align="center"
+        />
+        <div className="faq-grid">
+          {faqItems.map((item) => (
+            <details key={item.question} data-animate="fade-up">
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
           ))}
         </div>
       </section>
