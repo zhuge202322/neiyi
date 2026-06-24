@@ -34,13 +34,26 @@ export const company = {
 
 export const navItems = [
   { label: "Home", href: "/" },
+  { label: "Factory", href: "/manufacturing" },
   { label: "Products", href: "/products" },
   { label: "OEM Service", href: "/oem-odm" },
-  { label: "Factory", href: "/manufacturing" },
   { label: "Certificates", href: "/certificates" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
+
+export const languageOptions = [
+  { label: "English", code: "EN" },
+  { label: "Russian", code: "RU" },
+  { label: "Kazakh", code: "KZ" },
+  { label: "Belarusian", code: "BE" },
+  { label: "Japanese", code: "JP" },
+  { label: "Korean", code: "KR" },
+  { label: "Arabic", code: "AR" },
+];
+
+export const updatedMarketSupport =
+  "Our team provides project support for bras, panties, shapewear, thermal wear, loungewear, and knitted underwear products across Europe, Russia, Kazakhstan, Belarus, Southeast Asia, and other international markets. We have extensive experience in export and foreign trade services.";
 
 export const products = [
   {
@@ -424,27 +437,222 @@ export const values = [
 
 export const blogPosts = [
   {
+    title: "How to Start a Private Label Underwear Brand",
+    category: "Private Label Guide",
+    excerpt:
+      "A complete beginner guide covering product development, branding, manufacturing, sampling, production, and sales channels.",
+    href: "/blog/how-to-start-a-private-label-underwear-brand",
+  },
+  {
     title: "How to Prepare an OEM Underwear Inquiry",
     category: "OEM Guide",
     excerpt:
       "The fastest quotations usually include style references, fabric direction, size range, logo needs, packaging requests, and target quantity.",
+    href: "/blog",
   },
   {
     title: "Choosing Fabrics for Bras, Panties, and Shapewear",
     category: "Product Development",
     excerpt:
       "Comfort, elasticity, opacity, hand feel, and recovery performance should be reviewed early before sampling and bulk production.",
+    href: "/blog",
   },
   {
     title: "Private Label Packaging for Export Orders",
     category: "Packaging",
     excerpt:
       "Labels, hang tags, polybags, cartons, barcode stickers, and size assortments should be confirmed before production planning.",
+    href: "/blog",
   },
   {
     title: "What Buyers Should Check Before Bulk Production",
     category: "Quality Control",
     excerpt:
       "Approved samples, color standards, measurements, trims, packing method, and inspection points help reduce production risk.",
+    href: "/blog",
   },
 ];
+
+export const privateLabelGuide = {
+  title: "How to Start a Private Label Underwear Brand: A Complete Guide for Beginners",
+  seoTitle: "How to Start a Private Label Underwear Brand | Complete Guide 2026",
+  metaDescription:
+    "Learn how to start a private label underwear brand from product development to manufacturing, branding, and sales. A complete guide for beginners.",
+  heroImage: "/assets/blog-private-label/hero.jpg",
+  intro: [
+    "The global underwear market continues to grow as consumers increasingly seek comfortable, stylish, and high-quality products. With the rise of e-commerce platforms such as Shopify, Amazon, TikTok Shop, and Instagram, launching a private label underwear brand has become more accessible than ever.",
+    "Whether you are an entrepreneur, online retailer, or fashion startup, building your own underwear brand can be a profitable business opportunity. This guide will walk you through the essential steps to create a successful private label underwear brand.",
+  ],
+  keywords: [
+    "Private Label Underwear",
+    "Underwear Manufacturer",
+    "OEM Underwear",
+    "ODM Underwear",
+    "Underwear Brand",
+    "Custom Underwear Manufacturing",
+  ],
+  sections: [
+    {
+      title: "What Is a Private Label Underwear Brand?",
+      body: [
+        "A private label underwear brand is a product line manufactured by a factory but sold under your own brand name, logo, and packaging.",
+        "Instead of investing in your own production facility, you work with an experienced underwear manufacturer who produces products according to your specifications.",
+        "This model allows businesses to focus on branding, marketing, and sales while the manufacturer handles production.",
+      ],
+      bullets: [
+        "Women's bras",
+        "Panties",
+        "Shapewear",
+        "Thermal wear",
+        "Loungewear",
+        "Men's underwear",
+        "Seamless underwear",
+      ],
+      image: "/assets/blog-private-label/product-display.jpg",
+      imageAlt: "Private label bra and panty product display",
+    },
+    {
+      title: "Step 1: Identify Your Target Market",
+      body: [
+        "Before developing products, you should clearly define your target customers.",
+        "A clear market position helps you create products that stand out from competitors.",
+      ],
+      bullets: [
+        "Are you targeting women, men, or both?",
+        "Will you focus on comfort, fashion, sports, or shapewear?",
+        "What age group are you targeting?",
+        "Which countries or regions will you sell to?",
+      ],
+      callouts: [
+        ["Seamless Underwear", "Comfort-focused products suitable for everyday wear."],
+        ["Sports Bras", "Designed for active lifestyles and fitness enthusiasts."],
+        ["Shapewear", "Products that provide body shaping and support."],
+        ["Sustainable Underwear", "Made from eco-friendly fabrics and materials."],
+      ],
+      image: "/assets/blog-private-label/brand-planning.jpg",
+      imageAlt: "Private label underwear brand planning",
+    },
+    {
+      title: "Step 2: Develop Your Brand Identity",
+      body: [
+        "Your brand is more than just a logo.",
+        "Strong branding helps customers remember and trust your products.",
+      ],
+      bullets: ["Brand name", "Logo design", "Brand story", "Packaging design", "Product positioning"],
+      callouts: [
+        ["Affordable Everyday Comfort", "A value-led position for repeat basics."],
+        ["Premium Lingerie", "A refined direction for elevated materials and presentation."],
+        ["Eco-friendly Underwear", "A sustainability-led story with responsible materials."],
+        ["Plus-size Collections", "A fit-focused offer for underserved customers."],
+      ],
+    },
+    {
+      title: "Step 3: Choose the Right Underwear Manufacturer",
+      body: [
+        "Selecting the right manufacturing partner is one of the most important decisions.",
+        "A professional manufacturing partner can significantly reduce risks and improve product quality.",
+      ],
+      callouts: [
+        ["OEM & ODM Services", "OEM allows you to customize products with your own branding. ODM allows you to modify existing designs and bring products to market faster."],
+        ["Stable Production Capacity", "Ensure the factory can support your future growth."],
+        ["Quality Control", "Ask about inspection procedures and quality standards."],
+        ["Sampling Service", "Reliable manufacturers should provide samples before mass production."],
+        ["Export Experience", "Factories with international experience understand global quality requirements and shipping processes."],
+      ],
+      image: "/assets/blog-private-label/factory-workshop.png",
+      imageAlt: "Underwear factory production workshop",
+    },
+    {
+      title: "Step 4: Select Fabrics and Product Styles",
+      body: [
+        "Fabric selection directly affects comfort, durability, and customer satisfaction.",
+        "Work closely with your manufacturer to select fabrics that match your brand positioning.",
+      ],
+      callouts: [
+        ["Cotton", "Soft, breathable, and suitable for everyday wear."],
+        ["Modal", "Smooth, lightweight, and moisture-absorbing."],
+        ["Nylon-Spandex", "Commonly used in seamless underwear and shapewear."],
+        ["Bamboo Fiber", "Eco-friendly and naturally antibacterial."],
+        ["Lace", "Often used in premium lingerie collections."],
+      ],
+      image: "/assets/blog-private-label/fabric-display.png",
+      imageAlt: "Underwear fabric swatches",
+    },
+    {
+      title: "Step 5: Create Custom Branding",
+      body: [
+        "Private label products should include customized branding elements.",
+        "Consistent branding creates a professional appearance and improves customer recognition.",
+      ],
+      bullets: ["Woven labels", "Printed labels", "Heat transfer logos", "Hang tags", "Packaging bags", "Gift boxes"],
+      image: "/assets/blog-private-label/care-label.png",
+      imageAlt: "Underwear care label example",
+    },
+    {
+      title: "Step 6: Approve Samples",
+      body: [
+        "Before mass production begins, always review product samples carefully.",
+        "Sample approval helps prevent costly production mistakes. Most manufacturers can provide samples within 7-10 days.",
+      ],
+      bullets: ["Fabric quality", "Sizing accuracy", "Logo placement", "Stitching quality", "Packaging details"],
+      image: "/assets/blog-private-label/sample-approval.png",
+      imageAlt: "Underwear sample quality approval",
+    },
+    {
+      title: "Step 7: Place Your First Production Order",
+      body: [
+        "After approving samples, you can proceed with mass production.",
+        "For new brands, starting with a smaller order can help reduce inventory risks while testing market demand.",
+      ],
+      bullets: ["MOQ (Minimum Order Quantity)", "Production lead time", "Payment terms", "Shipping methods"],
+      images: [
+        {
+          src: "/assets/blog-private-label/finished-packing.png",
+          alt: "Finished underwear packing inspection",
+        },
+        {
+          src: "/assets/blog-private-label/packing-warehouse.png",
+          alt: "Underwear warehouse and export cartons",
+        },
+      ],
+    },
+    {
+      title: "Step 8: Build Your Sales Channels",
+      body: [
+        "Once production is completed, focus on sales and marketing.",
+        "Using multiple sales channels can accelerate brand growth.",
+      ],
+      callouts: [
+        ["Shopify Store", "Build your own branded online store."],
+        ["Amazon", "Reach a large customer base quickly."],
+        ["Instagram", "Showcase products through photos, videos, and influencer collaborations."],
+        ["TikTok Shop", "Leverage short-form video marketing."],
+        ["Wholesale Distribution", "Supply boutiques and retail stores."],
+      ],
+    },
+    {
+      title: "Common Mistakes to Avoid",
+      body: [
+        "Many new underwear brands encounter avoidable problems.",
+        "Avoiding these mistakes can save significant time and money.",
+      ],
+      bullets: [
+        "Choosing suppliers based only on price",
+        "Skipping sample approval",
+        "Ordering excessive inventory initially",
+        "Ignoring product quality",
+        "Weak branding and packaging",
+      ],
+    },
+    {
+      title: "Conclusion",
+      body: [
+        "Starting a private label underwear brand does not require owning a factory. By partnering with an experienced underwear manufacturer, you can focus on building your brand while ensuring consistent product quality.",
+        "Success comes from understanding your target market, selecting the right products, creating strong branding, and working with a reliable manufacturing partner.",
+        "With proper planning and execution, a private label underwear business can become a scalable and profitable venture.",
+      ],
+      image: "/assets/blog-private-label/factory-panorama.jpg",
+      imageAlt: "Winsun factory building panorama",
+    },
+  ],
+};

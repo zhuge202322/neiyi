@@ -12,6 +12,7 @@ import {
   products,
   processSteps,
   quickFacts,
+  updatedMarketSupport,
   whyChooseWinsun,
 } from "@/lib/site-data";
 
@@ -60,11 +61,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="home-about split-section">
+      <section className="home-about split-section" id="about-winsun">
         <div className="split-media">
           <Image
-            src="/assets/office.jpg"
-            alt="Winsun office team"
+            src="/assets/about-winsun-showroom-sample-office.jpg"
+            alt="Winsun sample display office"
             fill
             sizes="(min-width: 900px) 50vw, 100vw"
           />
@@ -77,10 +78,7 @@ export default function Home() {
             practical underwear development, production coordination, quality follow-up, packaging,
             and export service.
           </p>
-          <p>
-            Our team supports bras, panties, shapewear, thermal wear, loungewear, and knitted
-            underwear programs for Russia, Europe, and more overseas markets.
-          </p>
+          <p>{updatedMarketSupport}</p>
         </div>
       </section>
 

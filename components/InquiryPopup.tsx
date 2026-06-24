@@ -16,7 +16,7 @@ export function InquiryPopup() {
 
     const timer = window.setTimeout(() => {
       setOpen(true);
-    }, 650);
+    }, 8000);
 
     return () => window.clearTimeout(timer);
   }, []);

@@ -1,20 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { InquiryPopup } from "@/components/InquiryPopup";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-display",
-});
 
 export const metadata: Metadata = {
   title: "OEM & ODM Underwear Manufacturer in China | Bras, Panties & Shapewear Factory",
@@ -29,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable}`}>
+      <body>
         <Header />
         <main>{children}</main>
         <Footer />

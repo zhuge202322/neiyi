@@ -35,11 +35,11 @@ export default function BlogPage() {
         />
         <div className="blog-grid">
           {blogPosts.map((post) => (
-            <article className="blog-card" key={post.title} data-animate="fade-up">
+            <Link className="blog-card" href={post.href} key={post.title} data-animate="fade-up">
               <span>{post.category}</span>
               <h2>{post.title}</h2>
               <p>{post.excerpt}</p>
-            </article>
+            </Link>
           ))}
         </div>
       </section>

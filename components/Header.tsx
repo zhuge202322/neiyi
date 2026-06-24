@@ -3,15 +3,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, MessageCircle, X } from "lucide-react";
+import { Globe2, Menu, MessageCircle, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { company, navItems } from "@/lib/site-data";
+import { company, languageOptions, navItems } from "@/lib/site-data";
 
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const forceSolid = pathname.startsWith("/products/") && pathname !== "/products";
+  const forceSolid =
+    (pathname.startsWith("/products/") && pathname !== "/products") ||
+    (pathname.startsWith("/blog/") && pathname !== "/blog");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -44,6 +46,20 @@ export function Header() {
       </nav>
 
       <div className="header-actions">
+        <div className="language-menu">
+          <button type="button" aria-label="Select language">
+            <Globe2 size={17} />
+            <span>EN</span>
+          </button>
+          <div className="language-menu__panel">
+            {languageOptions.map((item) => (
+              <span key={item.code}>
+                <strong>{item.code}</strong>
+                {item.label}
+              </span>
+            ))}
+          </div>
+        </div>
         <Link href="/contact" className="icon-link" aria-label="Send an inquiry">
           <MessageCircle size={18} />
           <span>Inquiry</span>
@@ -68,6 +84,11 @@ export function Header() {
             {item.label}
           </Link>
         ))}
+        <div className="mobile-languages">
+          {languageOptions.map((item) => (
+            <span key={item.code}>{item.code}</span>
+          ))}
+        </div>
       </div>
     </header>
   );
