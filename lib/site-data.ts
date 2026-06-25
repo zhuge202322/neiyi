@@ -26,6 +26,7 @@ export const company = {
   established: "2015",
   address:
     "Flat/Rm 17, Blk A, 9/F, On Dak Industrial Building, 2-6 Wah Sing Street, Kwai Chung, Hong Kong",
+  email: "info@winsunhk.com",
   whatsApp: ["+86 198 7886 6771", "+86 139 2679 0536"],
   whatsAppPrimary: "+86 198 7886 6771",
   whatsAppLink: "https://wa.me/8619878866771",

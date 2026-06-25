@@ -2,15 +2,24 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { Globe2, Menu, MessageCircle, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { getLocaleFromValue, tr, withLocale, type Locale } from "@/lib/i18n";
 import { company, languageOptions, navItems } from "@/lib/site-data";
 
 export function Header() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const locale = getLocaleFromValue(searchParams.get("lang"));
+  const currentHref = useMemo(() => {
+    const query = searchParams.toString();
+    return `${pathname}${query ? `?${query}` : ""}`;
+  }, [pathname, searchParams]);
+  const languageHref = (nextLocale: Locale) => withLocale(currentHref, nextLocale);
+  const isActiveLanguage = (code: string) => (locale === "ru" ? code === "RU" : code === "EN");
   const forceSolid =
     (pathname.startsWith("/products/") && pathname !== "/products") ||
     (pathname.startsWith("/blog/") && pathname !== "/blog");
@@ -24,11 +33,11 @@ export function Header() {
 
   useEffect(() => {
     setOpen(false);
-  }, [pathname]);
+  }, [pathname, locale]);
 
   return (
     <header className={`site-header ${scrolled || forceSolid ? "site-header--solid" : ""}`}>
-      <Link href="/" className="brand" aria-label={`${company.name} home`}>
+      <Link href={withLocale("/", locale)} className="brand" aria-label={`${company.name} home`}>
         <Image src="/assets/winsun-logo.png" alt="" width={128} height={72} priority />
         <span>{company.name}</span>
       </Link>
@@ -37,10 +46,10 @@ export function Header() {
         {navItems.map((item) => (
           <Link
             key={item.href}
-            href={item.href}
+            href={withLocale(item.href, locale)}
             className={pathname === item.href ? "active" : ""}
           >
-            {item.label}
+            {tr(item.label, locale)}
           </Link>
         ))}
       </nav>
@@ -49,20 +58,36 @@ export function Header() {
         <div className="language-menu">
           <button type="button" aria-label="Select language">
             <Globe2 size={17} />
-            <span>EN</span>
+            <span>{locale === "ru" ? "RU" : "EN"}</span>
           </button>
           <div className="language-menu__panel">
-            {languageOptions.map((item) => (
-              <span key={item.code}>
-                <strong>{item.code}</strong>
-                {item.label}
-              </span>
-            ))}
+            {languageOptions.map((item) => {
+              if (item.code === "EN" || item.code === "RU") {
+                return (
+                  <Link
+                    key={item.code}
+                    href={languageHref(item.code === "RU" ? "ru" : "en")}
+                    className={isActiveLanguage(item.code) ? "active" : ""}
+                    data-locale-switch="true"
+                  >
+                    <strong>{item.code}</strong>
+                    {tr(item.label, locale)}
+                  </Link>
+                );
+              }
+
+              return (
+                <span key={item.code} aria-disabled="true">
+                  <strong>{item.code}</strong>
+                  {tr(item.label, locale)}
+                </span>
+              );
+            })}
           </div>
         </div>
-        <Link href="/contact" className="icon-link" aria-label="Send an inquiry">
+        <Link href={withLocale("/contact", locale)} className="icon-link" aria-label="Send an inquiry">
           <MessageCircle size={18} />
-          <span>Inquiry</span>
+          <span>{tr("Inquiry", locale)}</span>
         </Link>
         <button
           className="menu-button"
@@ -78,16 +103,29 @@ export function Header() {
         {navItems.map((item) => (
           <Link
             key={item.href}
-            href={item.href}
+            href={withLocale(item.href, locale)}
             className={pathname === item.href ? "active" : ""}
           >
-            {item.label}
+            {tr(item.label, locale)}
           </Link>
         ))}
         <div className="mobile-languages">
-          {languageOptions.map((item) => (
-            <span key={item.code}>{item.code}</span>
-          ))}
+          {languageOptions.map((item) =>
+            item.code === "EN" || item.code === "RU" ? (
+              <Link
+                key={item.code}
+                href={languageHref(item.code === "RU" ? "ru" : "en")}
+                className={isActiveLanguage(item.code) ? "active" : ""}
+                data-locale-switch="true"
+              >
+                {item.code}
+              </Link>
+            ) : (
+              <span key={item.code} aria-disabled="true">
+                {item.code}
+              </span>
+            ),
+          )}
         </div>
       </div>
     </header>

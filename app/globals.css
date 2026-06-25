@@ -214,7 +214,8 @@ main {
   transform: translateY(0);
 }
 
-.language-menu__panel span {
+.language-menu__panel span,
+.language-menu__panel a {
   display: grid;
   grid-template-columns: 36px minmax(0, 1fr);
   gap: 8px;
@@ -225,7 +226,9 @@ main {
   font-weight: 800;
 }
 
-.language-menu__panel span:hover {
+.language-menu__panel span:hover,
+.language-menu__panel a:hover,
+.language-menu__panel a.active {
   background: var(--paper);
 }
 
@@ -242,13 +245,28 @@ main {
   color: var(--ink);
 }
 
-.mobile-languages span {
+.mobile-languages span,
+.mobile-languages a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 7px 10px;
+  color: var(--ink);
   background: var(--paper);
   font-size: 0.76rem;
   font-weight: 900;
+}
+
+.mobile-languages a {
+  border-bottom: 1px solid var(--line);
+}
+
+.mobile-languages a.active {
+  color: var(--white);
+  border-color: var(--teal);
+  background: var(--teal);
 }
 
 .icon-link,
@@ -364,6 +382,26 @@ main {
 
 .mobile-panel a.active {
   color: var(--rose-deep);
+}
+
+.mobile-panel .mobile-languages a,
+.mobile-panel .mobile-languages span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: var(--ink);
+  background: var(--paper);
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.mobile-panel .mobile-languages a.active {
+  color: var(--white);
+  border-color: var(--teal);
+  background: var(--teal);
 }
 
 .hero {
@@ -2565,11 +2603,11 @@ main {
 }
 
 .page-hero--oem {
-  --hero-image: url("/assets/office.jpg");
+  --hero-image: url("/assets/blog-office-hero.jpg");
 }
 
 .page-hero--factory {
-  --hero-image: url("/assets/sewing-workshop.png");
+  --hero-image: url("/assets/blog-office-hero.jpg");
 }
 
 .page-hero--about {
@@ -2577,7 +2615,7 @@ main {
 }
 
 .page-hero--contact {
-  --hero-image: url("/assets/warehouse.png");
+  --hero-image: url("/assets/blog-office-hero.jpg");
 }
 
 .page-hero--certificates {

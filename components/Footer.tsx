@@ -45,7 +45,7 @@ export function Footer() {
           </p>
           <p className="footer-contact">
             <Mail size={16} />
-            <span>Email account pending</span>
+            <Link href={`mailto:${company.email}`}>{company.email}</Link>
           </p>
         </div>
       </div>

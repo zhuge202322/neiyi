@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { InquiryPopup } from "@/components/InquiryPopup";
+import { SiteTranslator } from "@/components/SiteTranslator";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
 export const metadata: Metadata = {
@@ -19,11 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
+        <Suspense fallback={null}>
+          <Header />
+        </Suspense>
         <main>{children}</main>
         <Footer />
         <InquiryPopup />
         <WhatsAppFloat />
+        <Suspense fallback={null}>
+          <SiteTranslator />
+        </Suspense>
       </body>
     </html>
   );

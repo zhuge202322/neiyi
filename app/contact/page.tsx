@@ -32,7 +32,9 @@ export default function ContactPage() {
           </div>
           <div className="contact-line">
             <Mail size={20} />
-            <p>Email account pending</p>
+            <p>
+              <a href={`mailto:${company.email}`}>{company.email}</a>
+            </p>
           </div>
           <div className="contact-panel">
             <strong>Recommended inquiry details</strong>

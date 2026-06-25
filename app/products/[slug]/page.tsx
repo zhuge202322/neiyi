@@ -205,10 +205,10 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
           <span className="eyebrow">Product Development</span>
           <h2>Designed around sourcing details, not just a catalog photo.</h2>
           <p>
-            This {product.name.toLowerCase()} can be adjusted around your market requirements,
-            target price, fabric preference, color range, sizing, logo placement, packaging, and
-            delivery plan. Winsun supports the full route from inquiry and sample review to bulk
-            production follow-up and export coordination.
+            Product specifications can be adjusted around your market requirements, target price,
+            fabric preference, color range, sizing, logo placement, packaging, and delivery plan.
+            Winsun supports the full route from inquiry and sample review to bulk production
+            follow-up and export coordination.
           </p>
         </div>
         <div className="product-option-grid" data-animate="fade-up">
