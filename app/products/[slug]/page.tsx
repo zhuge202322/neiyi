@@ -13,14 +13,19 @@ import {
 } from "lucide-react";
 import { CtaBand } from "@/components/CtaBand";
 import { GsapProvider } from "@/components/GsapProvider";
+import { ProductDetailGallery } from "@/components/ProductDetailGallery";
 import { SectionHeading } from "@/components/SectionHeading";
-import { productDetails, quickFacts } from "@/lib/site-data";
+import { quickFacts } from "@/lib/site-data";
+import { getSiteProductDetails } from "@/lib/site-cms";
 
 type ProductDetailPageProps = {
   params: {
     slug: string;
   };
 };
+
+export const dynamic = "force-dynamic";
+export const dynamicParams = true;
 
 const supportItems = [
   {
@@ -82,14 +87,9 @@ const developmentSteps = [
   },
 ];
 
-export function generateStaticParams() {
-  return productDetails.map((product) => ({
-    slug: product.slug,
-  }));
-}
-
-export function generateMetadata({ params }: ProductDetailPageProps) {
-  const product = productDetails.find((item) => item.slug === params.slug);
+export async function generateMetadata({ params }: ProductDetailPageProps) {
+  const products = await getSiteProductDetails();
+  const product = products.find((item) => item.slug === params.slug);
 
   if (!product) {
     return {};
@@ -101,7 +101,8 @@ export function generateMetadata({ params }: ProductDetailPageProps) {
   };
 }
 
-export default function ProductDetailPage({ params }: ProductDetailPageProps) {
+export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
+  const productDetails = await getSiteProductDetails();
   const product = productDetails.find((item) => item.slug === params.slug);
 
   if (!product) {
@@ -111,7 +112,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
   const related = productDetails
     .filter((item) => item.family === product.family && item.slug !== product.slug)
     .slice(0, 3);
-  const galleryItems = [product, ...related].slice(0, 4);
+  const galleryImages = product.images?.length ? product.images : [product.image];
 
   return (
     <GsapProvider>
@@ -121,32 +122,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
             <ArrowLeft size={16} />
             Back to Products
           </Link>
-          <div className="product-detail-main-image">
-            <Image src={product.image} alt={product.name} fill sizes="(min-width: 1100px) 54vw, 100vw" priority />
-            <div className="product-image-badge">
-              <span>OEM / ODM</span>
-              <strong>Factory direct</strong>
-            </div>
-          </div>
-          <div className="product-detail-caption">
-            <span>{product.family}</span>
-            <strong>Private label ready</strong>
-          </div>
-          <div className="product-gallery-thumbs" aria-label={`More ${product.family} styles`}>
-            {galleryItems.map((item) =>
-              item.slug === product.slug ? (
-                <div className="product-thumb product-thumb--active" key={item.slug}>
-                  <Image src={item.image} alt="" width={76} height={90} />
-                  <span>{item.name}</span>
-                </div>
-              ) : (
-                <Link href={`/products/${item.slug}`} className="product-thumb" key={item.slug}>
-                  <Image src={item.image} alt="" width={76} height={90} />
-                  <span>{item.name}</span>
-                </Link>
-              ),
-            )}
-          </div>
+          <ProductDetailGallery family={product.family} images={galleryImages} name={product.name} />
         </div>
 
         <aside className="product-detail-summary">

@@ -9,14 +9,16 @@ import {
   company,
   factoryStrength,
   faqItems,
-  products,
   processSteps,
   quickFacts,
   updatedMarketSupport,
   whyChooseWinsun,
 } from "@/lib/site-data";
+import { getSiteCoreProducts } from "@/lib/site-cms";
 
-export default function Home() {
+export default async function Home() {
+  const products = await getSiteCoreProducts();
+
   return (
     <GsapProvider>
       <section className="hero">

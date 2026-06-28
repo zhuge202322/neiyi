@@ -2,9 +2,12 @@ import { Mail, MapPin, MessageCircle } from "lucide-react";
 import { GsapProvider } from "@/components/GsapProvider";
 import { InquiryForm } from "@/components/InquiryForm";
 import { SectionHeading } from "@/components/SectionHeading";
-import { certifications, company, whyChooseWinsun } from "@/lib/site-data";
+import { certifications, whyChooseWinsun } from "@/lib/site-data";
+import { getSiteCompany } from "@/lib/site-cms";
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const company = await getSiteCompany();
+
   return (
     <GsapProvider>
       <section className="page-hero page-hero--contact">

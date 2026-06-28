@@ -4,7 +4,8 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { CtaBand } from "@/components/CtaBand";
 import { GsapProvider } from "@/components/GsapProvider";
 import { SectionHeading } from "@/components/SectionHeading";
-import { certifications, productFamilies, products, quickFacts } from "@/lib/site-data";
+import { certifications, quickFacts } from "@/lib/site-data";
+import { getSiteCoreProducts, getSiteProductFamilies } from "@/lib/site-cms";
 
 const productSupport = [
   "Private label development",
@@ -15,7 +16,12 @@ const productSupport = [
   "Export-ready carton arrangement",
 ];
 
-export default function ProductsPage() {
+export default async function ProductsPage() {
+  const [productFamilies, products] = await Promise.all([
+    getSiteProductFamilies(),
+    getSiteCoreProducts(),
+  ]);
+
   return (
     <GsapProvider>
       <section className="page-hero page-hero--products">

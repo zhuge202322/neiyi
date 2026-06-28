@@ -1,14 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, MessageCircle } from "lucide-react";
-import { company, navItems, products } from "@/lib/site-data";
+import { company as fallbackCompany, navItems } from "@/lib/site-data";
+import { getSiteCompany, getSiteCoreProducts } from "@/lib/site-cms";
 
-export function Footer() {
+export async function Footer() {
+  const [company, products] = await Promise.all([getSiteCompany(), getSiteCoreProducts()]);
+
   return (
     <footer className="footer">
       <div className="footer-grid">
         <div>
-          <Image src="/assets/winsun-logo.png" alt={company.name} width={136} height={76} />
+          <Image src="/assets/winsun-logo.png" alt={company.name || fallbackCompany.name} width={136} height={76} />
           <p>
             Underwear and knitted apparel OEM/ODM partner for global buyers seeking reliable
             development, production, and export service.

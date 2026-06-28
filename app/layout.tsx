@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import "./globals.css";
+import { AdminAwareChrome } from "@/components/AdminAwareChrome";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { InquiryPopup } from "@/components/InquiryPopup";
@@ -22,14 +23,15 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Suspense fallback={null}>
-          <Header />
-        </Suspense>
-        <main>{children}</main>
-        <Footer />
-        <InquiryPopup />
-        <WhatsAppFloat />
-        <Suspense fallback={null}>
-          <SiteTranslator />
+          <AdminAwareChrome
+            header={<Header />}
+            footer={<Footer />}
+            popup={<InquiryPopup />}
+            whatsapp={<WhatsAppFloat />}
+            translator={<SiteTranslator />}
+          >
+            {children}
+          </AdminAwareChrome>
         </Suspense>
       </body>
     </html>

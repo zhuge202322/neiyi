@@ -1,7 +1,9 @@
 import { MessageCircle } from "lucide-react";
-import { company } from "@/lib/site-data";
+import { getSiteCompany } from "@/lib/site-cms";
 
-export function WhatsAppFloat() {
+export async function WhatsAppFloat() {
+  const company = await getSiteCompany();
+
   return (
     <a
       className="whatsapp-float"
