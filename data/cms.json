@@ -1,345 +1,306 @@
 {
   "contact": {
-    "name": "Hong Kong Winsun Co., Limited",
+    "name": "Hong Kong Winsun Co., Ltd.",
     "shortName": "Winsun",
     "established": "2015",
     "address": "Flat/Rm 17, Blk A, 9/F, On Dak Industrial Building, 2-6 Wah Sing Street, Kwai Chung, Hong Kong",
     "email": "info@winsunhk.com",
     "whatsApp": [
-      "+86 198 7886 6771",
-      "+86 139 2679 0536"
+      "+86 19878866771"
     ],
-    "whatsAppPrimary": "+86 198 7886 6771",
+    "whatsAppPrimary": "+86 19878866771",
     "whatsAppLink": "https://wa.me/8619878866771",
     "markets": [
       "Russia",
+      "Kazakhstan",
+      "Belarus",
       "Europe",
-      "Global export markets"
-    ]
+      "USA",
+      "Southeast Asia"
+    ],
+    "chineseName": "\u9999\u6e2f\u57a3\u76db\u6709\u9650\u516c\u53f8",
+    "instagram": "+86 19878866771",
+    "telegram": "+86 19878866771"
   },
   "coreProducts": [
     {
-      "id": "knitted-underwear",
-      "title": "Knitted Underwear",
-      "description": "Comfort-led everyday collections made for repeat programs, private labels, and retail-ready assortments.",
-      "image": "/assets/requested-products/panty-color-set.jpg",
-      "iconKey": "shirt",
+      "id": "womens-bras",
+      "title": "Women's Bras",
+      "description": "OEM and ODM bra programs for everyday comfort, seamless looks, lace styling, and private label collections.",
+      "image": "/assets/629-update/womens-bras-1.png",
+      "iconKey": "sparkles",
       "visible": true,
       "sortOrder": 0
     },
     {
-      "id": "bras",
-      "title": "Bras",
-      "description": "Modern silhouettes with flexible material sourcing, sample refinement, and market-oriented fit direction.",
-      "image": "/assets/requested-products/seamless-bra.jpg",
-      "iconKey": "sparkles",
+      "id": "womens-panties",
+      "title": "Women's Panties",
+      "description": "Core panty programs for private labels, retail buyers, value packs, and seasonal assortments.",
+      "image": "/assets/629-update/womens-panties-1.png",
+      "iconKey": "gem",
       "visible": true,
       "sortOrder": 1
     },
     {
-      "id": "panties",
-      "title": "Panties",
-      "description": "Core and seasonal ranges across cotton, modal, lace, seamless-inspired, and knitted fabric options.",
-      "image": "/assets/requested-products/cotton-panties.jpg",
-      "iconKey": "gem",
-      "visible": true,
-      "sortOrder": 2
-    },
-    {
-      "id": "shapewear",
-      "title": "Shapewear",
-      "description": "Supportive bodywear developed around structure, elasticity, comfort, and packaging requirements.",
-      "image": "/assets/requested-products/waist-trainer.jpg",
+      "id": "shaping-shorts",
+      "title": "Shaping Shorts",
+      "description": "Supportive shaping shorts and bodywear styles built around comfort, smoothing, structure, and fit.",
+      "image": "/assets/629-update/shaping-shorts-1.png",
       "iconKey": "ruler",
       "visible": true,
-      "sortOrder": 3
-    },
-    {
-      "id": "thermal-wear",
-      "title": "Thermal Wear",
-      "description": "Warm, practical base-layer programs for cooler markets with stable production and delivery planning.",
-      "image": "/assets/requested-products/mens-thermal-set.jpg",
-      "iconKey": "thermometer",
-      "visible": true,
-      "sortOrder": 4
-    },
-    {
-      "id": "loungewear",
-      "title": "Loungewear",
-      "description": "Relaxed knitted apparel and related products designed for lifestyle, value, and replenishment demand.",
-      "image": "/assets/requested-products/seamless-panties.jpg",
-      "iconKey": "scissors",
-      "visible": true,
-      "sortOrder": 5
+      "sortOrder": 2
     }
   ],
   "productFamilies": [
     {
-      "id": "bras",
-      "title": "Bras",
-      "description": "Everyday and market-ready bra styles for OEM and ODM development.",
+      "id": "womens-bras",
+      "title": "Women's Bras",
+      "description": "OEM and ODM bra programs for everyday comfort, seamless looks, lace styling, and private label collections.",
       "sortOrder": 0,
       "products": [
         {
           "id": "seamless-bra",
-          "name": "Seamless Bra",
+          "name": "Seamless Everyday Bra",
           "slug": "seamless-bra",
-          "image": "/assets/requested-products/seamless-bra.jpg",
-          "summary": "Smooth daily bra programs for private labels seeking clean lines and comfort.",
+          "image": "/assets/629-update/womens-bras-1.png",
+          "summary": "Smooth everyday bra development for private labels seeking clean lines, soft support, and repeatable color programs.",
           "highlights": [
-            "Seamless look",
+            "Seamless comfort direction",
             "Soft stretch hand feel",
             "Private label colorways"
           ],
           "featured": true,
           "sortOrder": 0,
           "images": [
-            "/assets/requested-products/seamless-bra.jpg"
+            "/assets/629-update/womens-bras-1.png",
+            "/assets/629-update/womens-bras-2.png",
+            "/assets/629-update/womens-bras-3.png",
+            "/assets/629-update/womens-bras-4.png"
           ]
         },
         {
           "id": "sports-bra",
-          "name": "Sports Bra",
+          "name": "Wireless Comfort Bra",
           "slug": "sports-bra",
-          "image": "/assets/requested-products/sports-bra.jpg",
-          "summary": "Supportive active bra development for fitness, lounge, and athleisure buyers.",
-          "highlights": [
-            "Active support",
-            "Moisture-friendly fabrics",
-            "Elastic and logo options"
-          ],
-          "featured": false,
-          "sortOrder": 1,
-          "images": [
-            "/assets/requested-products/sports-bra.jpg"
-          ]
-        },
-        {
-          "id": "wireless-bra",
-          "name": "Wireless Bra",
-          "slug": "wireless-bra",
-          "image": "/assets/requested-products/wireless-bra.jpg",
-          "summary": "Wire-free comfort bra styles for everyday retail and replenishment programs.",
+          "image": "/assets/629-update/womens-bras-2.png",
+          "summary": "Wire-free comfort bra styles for everyday retail, online assortments, and size-range planning.",
           "highlights": [
             "Wire-free comfort",
             "Smooth cup direction",
             "Daily wear positioning"
           ],
           "featured": false,
+          "sortOrder": 1,
+          "images": [
+            "/assets/629-update/womens-bras-2.png",
+            "/assets/629-update/womens-bras-1.png",
+            "/assets/629-update/womens-bras-3.png",
+            "/assets/629-update/womens-bras-4.png"
+          ]
+        },
+        {
+          "id": "wireless-bra",
+          "name": "Lace Bra Set",
+          "slug": "wireless-bra",
+          "image": "/assets/629-update/womens-bras-3.png",
+          "summary": "Feminine lace bra and set development for seasonal assortments and private label packaging.",
+          "highlights": [
+            "Lace styling",
+            "Matching set direction",
+            "Retail packaging support"
+          ],
+          "featured": false,
           "sortOrder": 2,
           "images": [
-            "/assets/requested-products/wireless-bra.jpg"
+            "/assets/629-update/womens-bras-3.png",
+            "/assets/629-update/womens-bras-1.png",
+            "/assets/629-update/womens-bras-2.png",
+            "/assets/629-update/womens-bras-4.png"
           ]
         },
         {
           "id": "lace-bra",
-          "name": "Lace Bra",
+          "name": "Soft Cup Bra",
           "slug": "lace-bra",
-          "image": "/assets/requested-products/lace-bra.jpg",
-          "summary": "Feminine lace bra options for seasonal assortments and private label ranges.",
+          "image": "/assets/629-update/womens-bras-4.png",
+          "summary": "Soft cup bra programs with flexible fabric, color, label, and MOQ planning for export buyers.",
           "highlights": [
-            "Lace styling",
+            "Soft cup structure",
             "Multiple color options",
-            "Retail packaging support"
+            "ODM adaptation support"
           ],
           "featured": false,
           "sortOrder": 3,
           "images": [
-            "/assets/requested-products/lace-bra.jpg"
+            "/assets/629-update/womens-bras-4.png",
+            "/assets/629-update/womens-bras-1.png",
+            "/assets/629-update/womens-bras-2.png",
+            "/assets/629-update/womens-bras-3.png"
           ]
         }
       ]
     },
     {
-      "id": "panties",
-      "title": "Panties",
-      "description": "Core panty programs for private labels, retail buyers, and repeat orders.",
+      "id": "womens-panties",
+      "title": "Women's Panties",
+      "description": "Core panty programs for private labels, retail buyers, value packs, and seasonal assortments.",
       "sortOrder": 1,
       "products": [
         {
           "id": "cotton-panties",
-          "name": "Cotton Panties",
+          "name": "Seamless Panties",
           "slug": "cotton-panties",
-          "image": "/assets/requested-products/cotton-panties.jpg",
-          "summary": "Core cotton panty programs for everyday underwear collections.",
+          "image": "/assets/629-update/womens-panties-1.png",
+          "summary": "Smooth panty styles for everyday comfort, invisible-feel retail ranges, and color assortments.",
           "highlights": [
-            "Cotton-rich direction",
+            "Smooth edge direction",
             "Daily comfort",
             "Size set planning"
           ],
           "featured": true,
           "sortOrder": 0,
           "images": [
-            "/assets/requested-products/cotton-panties.jpg"
+            "/assets/629-update/womens-panties-1.png",
+            "/assets/629-update/womens-panties-2.png",
+            "/assets/629-update/womens-panties-3.png",
+            "/assets/629-update/womens-panties-4.png"
           ]
         },
         {
           "id": "seamless-panties",
-          "name": "Seamless Panties",
+          "name": "Lace Panties",
           "slug": "seamless-panties",
-          "image": "/assets/requested-products/seamless-panties.jpg",
-          "summary": "Smooth panty styles for invisible-feel retail ranges and value packs.",
+          "image": "/assets/629-update/womens-panties-2.png",
+          "summary": "Lace panty development for feminine collections, brand sets, and retail-ready private label packs.",
           "highlights": [
-            "Smooth edge direction",
-            "Multi-pack colors",
-            "Soft stretch fabrics"
+            "Lace pattern options",
+            "Private label packs",
+            "Color assortment support"
           ],
           "featured": false,
           "sortOrder": 1,
           "images": [
-            "/assets/requested-products/seamless-panties.jpg"
+            "/assets/629-update/womens-panties-2.png",
+            "/assets/629-update/womens-panties-1.png",
+            "/assets/629-update/womens-panties-3.png",
+            "/assets/629-update/womens-panties-4.png"
           ]
         },
         {
           "id": "panty-color-set",
-          "name": "Panty Color Set",
+          "name": "Printed Panty Pack",
           "slug": "panty-color-set",
-          "image": "/assets/requested-products/panty-color-set.jpg",
-          "summary": "Assorted color panty sets for retail packs, online bundles, and promotions.",
+          "image": "/assets/629-update/womens-panties-3.png",
+          "summary": "Printed and assorted panty packs for retail bundles, e-commerce sets, and promotional programs.",
           "highlights": [
-            "Color assortment",
+            "Print assortment",
             "Pack development",
             "Label and polybag support"
           ],
           "featured": false,
           "sortOrder": 2,
           "images": [
-            "/assets/requested-products/panty-color-set.jpg"
+            "/assets/629-update/womens-panties-3.png",
+            "/assets/629-update/womens-panties-1.png",
+            "/assets/629-update/womens-panties-2.png",
+            "/assets/629-update/womens-panties-4.png"
           ]
         },
         {
           "id": "high-waist-panties",
-          "name": "High Waist Panties",
+          "name": "Thong Panties",
           "slug": "high-waist-panties",
-          "image": "/assets/requested-products/high-waist-panties.jpg",
-          "summary": "High waist silhouettes for comfort, coverage, and shaping-inspired programs.",
+          "image": "/assets/629-update/womens-panties-4.png",
+          "summary": "Thong panty styles with soft waistband, color planning, and private label presentation.",
           "highlights": [
-            "High waist fit",
-            "Coverage-focused",
-            "Comfort waistband options"
+            "Thong silhouette",
+            "Soft waistband options",
+            "Comfort-focused finishing"
           ],
           "featured": false,
           "sortOrder": 3,
           "images": [
-            "/assets/requested-products/high-waist-panties.jpg"
+            "/assets/629-update/womens-panties-4.png",
+            "/assets/629-update/womens-panties-1.png",
+            "/assets/629-update/womens-panties-2.png",
+            "/assets/629-update/womens-panties-3.png"
           ]
         }
       ]
     },
     {
-      "id": "thermal-wear",
-      "title": "Thermal Wear",
-      "description": "Warm base-layer sets for seasonal and cooler-market programs.",
+      "id": "shaping-shorts",
+      "title": "Shaping Shorts",
+      "description": "Supportive shaping shorts and bodywear styles built around comfort, smoothing, structure, and fit.",
       "sortOrder": 2,
       "products": [
         {
-          "id": "mens-thermal-set",
-          "name": "Men's Thermal Set",
-          "slug": "mens-thermal-set",
-          "image": "/assets/requested-products/mens-thermal-set.jpg",
-          "summary": "Men's warm base-layer sets for winter retail and export programs.",
-          "highlights": [
-            "Warm base layer",
-            "Set packaging",
-            "Seasonal order planning"
-          ],
-          "featured": true,
-          "sortOrder": 0,
-          "images": [
-            "/assets/requested-products/mens-thermal-set.jpg"
-          ]
-        },
-        {
-          "id": "mens-thermal-black-set",
-          "name": "Men's Thermal Black Set",
-          "slug": "mens-thermal-black-set",
-          "image": "/assets/requested-products/mens-thermal-black.jpg",
-          "summary": "Black men's thermal set option for practical winter underwear ranges.",
-          "highlights": [
-            "Dark colorway",
-            "Long sleeve and pant set",
-            "Bulk order support"
-          ],
-          "featured": false,
-          "sortOrder": 1,
-          "images": [
-            "/assets/requested-products/mens-thermal-black.jpg"
-          ]
-        },
-        {
-          "id": "womens-thermal-set",
-          "name": "Women's Thermal Set",
-          "slug": "womens-thermal-set",
-          "image": "/assets/requested-products/womens-thermal-set.jpg",
-          "summary": "Women's fitted thermal sets for cooler-market daily wear programs.",
-          "highlights": [
-            "Women's fit direction",
-            "Warm hand feel",
-            "Color and size planning"
-          ],
-          "featured": false,
-          "sortOrder": 2,
-          "images": [
-            "/assets/requested-products/womens-thermal-set.jpg"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "shapewear",
-      "title": "Shapewear",
-      "description": "Supportive shapewear ranges built around comfort, structure, and fit.",
-      "sortOrder": 3,
-      "products": [
-        {
           "id": "bodysuit",
-          "name": "Bodysuit",
+          "name": "High Waist Shaping Shorts",
           "slug": "bodysuit",
           "image": "/assets/requested-products/bodysuit.jpg",
-          "summary": "One-piece shapewear bodysuit development for smooth support collections.",
+          "summary": "High waist shaping shorts for smoothing, waist support, and comfort-led private label bodywear.",
           "highlights": [
-            "One-piece support",
+            "High waist support",
             "Smooth body line",
             "Private label trim options"
           ],
           "featured": true,
           "sortOrder": 0,
           "images": [
-            "/assets/requested-products/bodysuit.jpg"
+            "/assets/requested-products/bodysuit.jpg",
+            "/assets/requested-products/waist-trainer.jpg",
+            "/assets/requested-products/shapewear-set.jpg",
+            "/assets/requested-products/shaping-shorts.jpg",
+            "/assets/629-update/shaping-shorts-1.png",
+            "/assets/629-update/shaping-shorts-2.png",
+            "/assets/629-update/shaping-shorts-3.png"
           ]
         },
         {
           "id": "waist-trainer",
-          "name": "Waist Trainer",
+          "name": "Waist Control Shorts",
           "slug": "waist-trainer",
           "image": "/assets/requested-products/waist-trainer.jpg",
-          "summary": "Waist support styles for structured shapewear and body shaping programs.",
+          "summary": "Waist control shorts for structured shapewear ranges, elastic strength planning, and export orders.",
           "highlights": [
             "Waist support",
-            "Hook and closure options",
-            "Elastic strength planning"
+            "Elastic strength planning",
+            "Bulk order support"
           ],
           "featured": false,
           "sortOrder": 1,
           "images": [
-            "/assets/requested-products/waist-trainer.jpg"
+            "/assets/requested-products/waist-trainer.jpg",
+            "/assets/requested-products/bodysuit.jpg",
+            "/assets/requested-products/shapewear-set.jpg",
+            "/assets/requested-products/shaping-shorts.jpg",
+            "/assets/629-update/shaping-shorts-1.png",
+            "/assets/629-update/shaping-shorts-2.png",
+            "/assets/629-update/shaping-shorts-3.png"
           ]
         },
         {
           "id": "shapewear-set",
-          "name": "Shapewear Set",
+          "name": "Seamless Shaping Shorts",
           "slug": "shapewear-set",
           "image": "/assets/requested-products/shapewear-set.jpg",
-          "summary": "Coordinated shapewear set options for waist and thigh support programs.",
+          "summary": "Seamless-inspired shaping shorts with support zones, soft stretch, and retail-ready presentation.",
           "highlights": [
-            "Coordinated set",
             "Support zones",
+            "Smooth stretch feel",
             "Retail-ready presentation"
           ],
           "featured": false,
           "sortOrder": 2,
           "images": [
-            "/assets/requested-products/shapewear-set.jpg"
+            "/assets/requested-products/shapewear-set.jpg",
+            "/assets/requested-products/bodysuit.jpg",
+            "/assets/requested-products/waist-trainer.jpg",
+            "/assets/requested-products/shaping-shorts.jpg",
+            "/assets/629-update/shaping-shorts-1.png",
+            "/assets/629-update/shaping-shorts-2.png",
+            "/assets/629-update/shaping-shorts-3.png"
           ]
         },
         {
@@ -347,7 +308,7 @@
           "name": "Shaping Shorts",
           "slug": "shaping-shorts",
           "image": "/assets/requested-products/shaping-shorts.jpg",
-          "summary": "Shaping shorts for smoothing, support, and comfort-led bodywear ranges.",
+          "summary": "Shaping shorts for thigh coverage, smoothing support, and comfortable waistband development.",
           "highlights": [
             "Thigh coverage",
             "Smooth support",
@@ -356,11 +317,86 @@
           "featured": false,
           "sortOrder": 3,
           "images": [
-            "/assets/requested-products/shaping-shorts.jpg"
+            "/assets/requested-products/shaping-shorts.jpg",
+            "/assets/requested-products/bodysuit.jpg",
+            "/assets/requested-products/waist-trainer.jpg",
+            "/assets/requested-products/shapewear-set.jpg",
+            "/assets/629-update/shaping-shorts-1.png",
+            "/assets/629-update/shaping-shorts-2.png",
+            "/assets/629-update/shaping-shorts-3.png"
+          ]
+        },
+        {
+          "id": "light-control-shaping-shorts",
+          "name": "Light Control Shaping Shorts",
+          "slug": "light-control-shaping-shorts",
+          "image": "/assets/629-update/shaping-shorts-1.png",
+          "summary": "Light control shaping shorts for daily wear programs needing soft compression and smooth finishing.",
+          "highlights": [
+            "Light control",
+            "Daily wear comfort",
+            "Soft compression"
+          ],
+          "featured": false,
+          "sortOrder": 4,
+          "images": [
+            "/assets/629-update/shaping-shorts-1.png",
+            "/assets/requested-products/bodysuit.jpg",
+            "/assets/requested-products/waist-trainer.jpg",
+            "/assets/requested-products/shapewear-set.jpg",
+            "/assets/requested-products/shaping-shorts.jpg",
+            "/assets/629-update/shaping-shorts-2.png",
+            "/assets/629-update/shaping-shorts-3.png"
+          ]
+        },
+        {
+          "id": "high-rise-shaper-brief",
+          "name": "High Rise Shaper Brief",
+          "slug": "high-rise-shaper-brief",
+          "image": "/assets/629-update/shaping-shorts-2.png",
+          "summary": "High rise shaper brief with smooth waistband direction and private label color options.",
+          "highlights": [
+            "High rise fit",
+            "Smooth waistband",
+            "Color planning"
+          ],
+          "featured": false,
+          "sortOrder": 5,
+          "images": [
+            "/assets/629-update/shaping-shorts-2.png",
+            "/assets/requested-products/bodysuit.jpg",
+            "/assets/requested-products/waist-trainer.jpg",
+            "/assets/requested-products/shapewear-set.jpg",
+            "/assets/requested-products/shaping-shorts.jpg",
+            "/assets/629-update/shaping-shorts-1.png",
+            "/assets/629-update/shaping-shorts-3.png"
+          ]
+        },
+        {
+          "id": "firm-support-shaping-shorts",
+          "name": "Firm Support Shaping Shorts",
+          "slug": "firm-support-shaping-shorts",
+          "image": "/assets/629-update/shaping-shorts-3.png",
+          "summary": "Firm support shaping shorts for body smoothing collections, support zones, and OEM customization.",
+          "highlights": [
+            "Firm support",
+            "Body smoothing",
+            "OEM customization"
+          ],
+          "featured": false,
+          "sortOrder": 6,
+          "images": [
+            "/assets/629-update/shaping-shorts-3.png",
+            "/assets/requested-products/bodysuit.jpg",
+            "/assets/requested-products/waist-trainer.jpg",
+            "/assets/requested-products/shapewear-set.jpg",
+            "/assets/requested-products/shaping-shorts.jpg",
+            "/assets/629-update/shaping-shorts-1.png",
+            "/assets/629-update/shaping-shorts-2.png"
           ]
         }
       ]
     }
   ],
-  "updatedAt": "2026-06-28T15:05:29.586Z"
+  "updatedAt": "2026-06-29T05:04:41.165Z"
 }

@@ -21,9 +21,17 @@ const scenes = [
   },
   {
     title: "Showroom",
-    text: "Category presentation and style reference support for product discussions.",
-    image: "/assets/requested-factory/showroom-detail.jpg",
+    text:
+      "Our showroom showcases bras, panties, shapewear, loungewear, and seamless underwear for material, design, and customization review.",
+    image: "/assets/showroom.png",
     icon: Shirt,
+  },
+  {
+    title: "Seamless Knitting Process",
+    text:
+      "Advanced computerized knitting machines automatically produce seamless garments with consistent quality, high efficiency, and precise stitching, ensuring excellent comfort and durability.",
+    image: "/assets/knitting-room.png",
+    icon: Factory,
   },
   {
     title: "Warehouse",
@@ -53,7 +61,7 @@ export default function ManufacturingPage() {
         </div>
       </section>
 
-      <section className="factory-video-section">
+      <section className="factory-video-section" id="factory-video">
         <div className="video-copy" data-animate="fade-up">
           <PlayCircle size={30} />
           <h2>Factory video preview</h2>

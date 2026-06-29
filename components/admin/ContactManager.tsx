@@ -60,8 +60,12 @@ export function ContactManager({ initial }: ContactManagerProps) {
 
         <div className="admin-grid two">
           <label>
-            <span>公司名称</span>
+            <span>公司英文名称</span>
             <input value={contact.name} onChange={(event) => update("name", event.target.value)} />
+          </label>
+          <label>
+            <span>公司中文名称</span>
+            <input value={contact.chineseName || ""} onChange={(event) => update("chineseName", event.target.value)} />
           </label>
           <label>
             <span>公司简称</span>
@@ -74,6 +78,14 @@ export function ContactManager({ initial }: ContactManagerProps) {
           <label>
             <span>企业邮箱</span>
             <input type="email" value={contact.email} onChange={(event) => update("email", event.target.value)} />
+          </label>
+          <label>
+            <span>Instagram</span>
+            <input value={contact.instagram || ""} onChange={(event) => update("instagram", event.target.value)} />
+          </label>
+          <label>
+            <span>Telegram</span>
+            <input value={contact.telegram || ""} onChange={(event) => update("telegram", event.target.value)} />
           </label>
           <label className="wide">
             <span>公司地址</span>

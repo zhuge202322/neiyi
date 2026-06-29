@@ -21,16 +21,19 @@ import {
 } from "lucide-react";
 
 export const company = {
-  name: "Hong Kong Winsun Co., Limited",
+  name: "Hong Kong Winsun Co., Ltd.",
+  chineseName: "香港垣盛有限公司",
   shortName: "Winsun",
   established: "2015",
   address:
     "Flat/Rm 17, Blk A, 9/F, On Dak Industrial Building, 2-6 Wah Sing Street, Kwai Chung, Hong Kong",
   email: "info@winsunhk.com",
-  whatsApp: ["+86 198 7886 6771", "+86 139 2679 0536"],
-  whatsAppPrimary: "+86 198 7886 6771",
+  instagram: "+86 19878866771",
+  telegram: "+86 19878866771",
+  whatsApp: ["+86 19878866771"],
+  whatsAppPrimary: "+86 19878866771",
   whatsAppLink: "https://wa.me/8619878866771",
-  markets: ["Russia", "Europe", "Global export markets"],
+  markets: ["Russia", "Kazakhstan", "Belarus", "Europe", "USA", "Southeast Asia"],
 };
 
 export const navItems = [
@@ -247,131 +250,244 @@ export const certifications = [
 
 export const productFamilies = [
   {
-    title: "Bras",
-    description: "Everyday and market-ready bra styles for OEM and ODM development.",
+    title: "Women's Bras",
+    description:
+      "OEM and ODM bra programs for everyday comfort, seamless looks, lace styling, and private label collections.",
     products: [
       {
-        name: "Seamless Bra",
+        name: "Seamless Everyday Bra",
         slug: "seamless-bra",
-        image: "/assets/requested-products/seamless-bra.jpg",
-        summary: "Smooth daily bra programs for private labels seeking clean lines and comfort.",
-        highlights: ["Seamless look", "Soft stretch hand feel", "Private label colorways"],
+        image: "/assets/629-update/womens-bras-1.png",
+        images: [
+          "/assets/629-update/womens-bras-1.png",
+          "/assets/629-update/womens-bras-2.png",
+          "/assets/629-update/womens-bras-3.png",
+          "/assets/629-update/womens-bras-4.png",
+        ],
+        summary:
+          "Smooth everyday bra development for private labels seeking clean lines, soft support, and repeatable color programs.",
+        highlights: ["Seamless comfort direction", "Soft stretch hand feel", "Private label colorways"],
       },
       {
-        name: "Sports Bra",
+        name: "Wireless Comfort Bra",
         slug: "sports-bra",
-        image: "/assets/requested-products/sports-bra.jpg",
-        summary: "Supportive active bra development for fitness, lounge, and athleisure buyers.",
-        highlights: ["Active support", "Moisture-friendly fabrics", "Elastic and logo options"],
-      },
-      {
-        name: "Wireless Bra",
-        slug: "wireless-bra",
-        image: "/assets/requested-products/wireless-bra.jpg",
-        summary: "Wire-free comfort bra styles for everyday retail and replenishment programs.",
+        image: "/assets/629-update/womens-bras-2.png",
+        images: [
+          "/assets/629-update/womens-bras-2.png",
+          "/assets/629-update/womens-bras-1.png",
+          "/assets/629-update/womens-bras-3.png",
+          "/assets/629-update/womens-bras-4.png",
+        ],
+        summary: "Wire-free comfort bra styles for everyday retail, online assortments, and size-range planning.",
         highlights: ["Wire-free comfort", "Smooth cup direction", "Daily wear positioning"],
       },
       {
-        name: "Lace Bra",
+        name: "Lace Bra Set",
+        slug: "wireless-bra",
+        image: "/assets/629-update/womens-bras-3.png",
+        images: [
+          "/assets/629-update/womens-bras-3.png",
+          "/assets/629-update/womens-bras-1.png",
+          "/assets/629-update/womens-bras-2.png",
+          "/assets/629-update/womens-bras-4.png",
+        ],
+        summary: "Feminine lace bra and set development for seasonal assortments and private label packaging.",
+        highlights: ["Lace styling", "Matching set direction", "Retail packaging support"],
+      },
+      {
+        name: "Soft Cup Bra",
         slug: "lace-bra",
-        image: "/assets/requested-products/lace-bra.jpg",
-        summary: "Feminine lace bra options for seasonal assortments and private label ranges.",
-        highlights: ["Lace styling", "Multiple color options", "Retail packaging support"],
+        image: "/assets/629-update/womens-bras-4.png",
+        images: [
+          "/assets/629-update/womens-bras-4.png",
+          "/assets/629-update/womens-bras-1.png",
+          "/assets/629-update/womens-bras-2.png",
+          "/assets/629-update/womens-bras-3.png",
+        ],
+        summary: "Soft cup bra programs with flexible fabric, color, label, and MOQ planning for export buyers.",
+        highlights: ["Soft cup structure", "Multiple color options", "ODM adaptation support"],
       },
     ],
   },
   {
-    title: "Panties",
-    description: "Core panty programs for private labels, retail buyers, and repeat orders.",
+    title: "Women's Panties",
+    description: "Core panty programs for private labels, retail buyers, value packs, and seasonal assortments.",
     products: [
-      {
-        name: "Cotton Panties",
-        slug: "cotton-panties",
-        image: "/assets/requested-products/cotton-panties.jpg",
-        summary: "Core cotton panty programs for everyday underwear collections.",
-        highlights: ["Cotton-rich direction", "Daily comfort", "Size set planning"],
-      },
       {
         name: "Seamless Panties",
+        slug: "cotton-panties",
+        image: "/assets/629-update/womens-panties-1.png",
+        images: [
+          "/assets/629-update/womens-panties-1.png",
+          "/assets/629-update/womens-panties-2.png",
+          "/assets/629-update/womens-panties-3.png",
+          "/assets/629-update/womens-panties-4.png",
+        ],
+        summary:
+          "Smooth panty styles for everyday comfort, invisible-feel retail ranges, and color assortments.",
+        highlights: ["Smooth edge direction", "Daily comfort", "Size set planning"],
+      },
+      {
+        name: "Lace Panties",
         slug: "seamless-panties",
-        image: "/assets/requested-products/seamless-panties.jpg",
-        summary: "Smooth panty styles for invisible-feel retail ranges and value packs.",
-        highlights: ["Smooth edge direction", "Multi-pack colors", "Soft stretch fabrics"],
+        image: "/assets/629-update/womens-panties-2.png",
+        images: [
+          "/assets/629-update/womens-panties-2.png",
+          "/assets/629-update/womens-panties-1.png",
+          "/assets/629-update/womens-panties-3.png",
+          "/assets/629-update/womens-panties-4.png",
+        ],
+        summary: "Lace panty development for feminine collections, brand sets, and retail-ready private label packs.",
+        highlights: ["Lace pattern options", "Private label packs", "Color assortment support"],
       },
       {
-        name: "Panty Color Set",
+        name: "Printed Panty Pack",
         slug: "panty-color-set",
-        image: "/assets/requested-products/panty-color-set.jpg",
-        summary: "Assorted color panty sets for retail packs, online bundles, and promotions.",
-        highlights: ["Color assortment", "Pack development", "Label and polybag support"],
+        image: "/assets/629-update/womens-panties-3.png",
+        images: [
+          "/assets/629-update/womens-panties-3.png",
+          "/assets/629-update/womens-panties-1.png",
+          "/assets/629-update/womens-panties-2.png",
+          "/assets/629-update/womens-panties-4.png",
+        ],
+        summary: "Printed and assorted panty packs for retail bundles, e-commerce sets, and promotional programs.",
+        highlights: ["Print assortment", "Pack development", "Label and polybag support"],
       },
       {
-        name: "High Waist Panties",
+        name: "Thong Panties",
         slug: "high-waist-panties",
-        image: "/assets/requested-products/high-waist-panties.jpg",
-        summary: "High waist silhouettes for comfort, coverage, and shaping-inspired programs.",
-        highlights: ["High waist fit", "Coverage-focused", "Comfort waistband options"],
+        image: "/assets/629-update/womens-panties-4.png",
+        images: [
+          "/assets/629-update/womens-panties-4.png",
+          "/assets/629-update/womens-panties-1.png",
+          "/assets/629-update/womens-panties-2.png",
+          "/assets/629-update/womens-panties-3.png",
+        ],
+        summary: "Thong panty styles with soft waistband, color planning, and private label presentation.",
+        highlights: ["Thong silhouette", "Soft waistband options", "Comfort-focused finishing"],
       },
     ],
   },
   {
-    title: "Thermal Wear",
-    description: "Warm base-layer sets for seasonal and cooler-market programs.",
+    title: "Shaping Shorts",
+    description:
+      "Supportive shaping shorts and bodywear styles built around comfort, smoothing, structure, and fit.",
     products: [
       {
-        name: "Men's Thermal Set",
-        slug: "mens-thermal-set",
-        image: "/assets/requested-products/mens-thermal-set.jpg",
-        summary: "Men's warm base-layer sets for winter retail and export programs.",
-        highlights: ["Warm base layer", "Set packaging", "Seasonal order planning"],
-      },
-      {
-        name: "Men's Thermal Black Set",
-        slug: "mens-thermal-black-set",
-        image: "/assets/requested-products/mens-thermal-black.jpg",
-        summary: "Black men's thermal set option for practical winter underwear ranges.",
-        highlights: ["Dark colorway", "Long sleeve and pant set", "Bulk order support"],
-      },
-      {
-        name: "Women's Thermal Set",
-        slug: "womens-thermal-set",
-        image: "/assets/requested-products/womens-thermal-set.jpg",
-        summary: "Women's fitted thermal sets for cooler-market daily wear programs.",
-        highlights: ["Women's fit direction", "Warm hand feel", "Color and size planning"],
-      },
-    ],
-  },
-  {
-    title: "Shapewear",
-    description: "Supportive shapewear ranges built around comfort, structure, and fit.",
-    products: [
-      {
-        name: "Bodysuit",
+        name: "High Waist Shaping Shorts",
         slug: "bodysuit",
         image: "/assets/requested-products/bodysuit.jpg",
-        summary: "One-piece shapewear bodysuit development for smooth support collections.",
-        highlights: ["One-piece support", "Smooth body line", "Private label trim options"],
+        images: [
+          "/assets/requested-products/bodysuit.jpg",
+          "/assets/requested-products/waist-trainer.jpg",
+          "/assets/requested-products/shapewear-set.jpg",
+          "/assets/requested-products/shaping-shorts.jpg",
+          "/assets/629-update/shaping-shorts-1.png",
+          "/assets/629-update/shaping-shorts-2.png",
+          "/assets/629-update/shaping-shorts-3.png",
+        ],
+        summary: "High waist shaping shorts for smoothing, waist support, and comfort-led private label bodywear.",
+        highlights: ["High waist support", "Smooth body line", "Private label trim options"],
       },
       {
-        name: "Waist Trainer",
+        name: "Waist Control Shorts",
         slug: "waist-trainer",
         image: "/assets/requested-products/waist-trainer.jpg",
-        summary: "Waist support styles for structured shapewear and body shaping programs.",
-        highlights: ["Waist support", "Hook and closure options", "Elastic strength planning"],
+        images: [
+          "/assets/requested-products/waist-trainer.jpg",
+          "/assets/requested-products/bodysuit.jpg",
+          "/assets/requested-products/shapewear-set.jpg",
+          "/assets/requested-products/shaping-shorts.jpg",
+          "/assets/629-update/shaping-shorts-1.png",
+          "/assets/629-update/shaping-shorts-2.png",
+          "/assets/629-update/shaping-shorts-3.png",
+        ],
+        summary:
+          "Waist control shorts for structured shapewear ranges, elastic strength planning, and export orders.",
+        highlights: ["Waist support", "Elastic strength planning", "Bulk order support"],
       },
       {
-        name: "Shapewear Set",
+        name: "Seamless Shaping Shorts",
         slug: "shapewear-set",
         image: "/assets/requested-products/shapewear-set.jpg",
-        summary: "Coordinated shapewear set options for waist and thigh support programs.",
-        highlights: ["Coordinated set", "Support zones", "Retail-ready presentation"],
+        images: [
+          "/assets/requested-products/shapewear-set.jpg",
+          "/assets/requested-products/bodysuit.jpg",
+          "/assets/requested-products/waist-trainer.jpg",
+          "/assets/requested-products/shaping-shorts.jpg",
+          "/assets/629-update/shaping-shorts-1.png",
+          "/assets/629-update/shaping-shorts-2.png",
+          "/assets/629-update/shaping-shorts-3.png",
+        ],
+        summary:
+          "Seamless-inspired shaping shorts with support zones, soft stretch, and retail-ready presentation.",
+        highlights: ["Support zones", "Smooth stretch feel", "Retail-ready presentation"],
       },
       {
         name: "Shaping Shorts",
         slug: "shaping-shorts",
         image: "/assets/requested-products/shaping-shorts.jpg",
-        summary: "Shaping shorts for smoothing, support, and comfort-led bodywear ranges.",
+        images: [
+          "/assets/requested-products/shaping-shorts.jpg",
+          "/assets/requested-products/bodysuit.jpg",
+          "/assets/requested-products/waist-trainer.jpg",
+          "/assets/requested-products/shapewear-set.jpg",
+          "/assets/629-update/shaping-shorts-1.png",
+          "/assets/629-update/shaping-shorts-2.png",
+          "/assets/629-update/shaping-shorts-3.png",
+        ],
+        summary: "Shaping shorts for thigh coverage, smoothing support, and comfortable waistband development.",
         highlights: ["Thigh coverage", "Smooth support", "Comfort waistband direction"],
+      },
+      {
+        name: "Light Control Shaping Shorts",
+        slug: "light-control-shaping-shorts",
+        image: "/assets/629-update/shaping-shorts-1.png",
+        images: [
+          "/assets/629-update/shaping-shorts-1.png",
+          "/assets/requested-products/bodysuit.jpg",
+          "/assets/requested-products/waist-trainer.jpg",
+          "/assets/requested-products/shapewear-set.jpg",
+          "/assets/requested-products/shaping-shorts.jpg",
+          "/assets/629-update/shaping-shorts-2.png",
+          "/assets/629-update/shaping-shorts-3.png",
+        ],
+        summary:
+          "Light control shaping shorts for daily wear programs needing soft compression and smooth finishing.",
+        highlights: ["Light control", "Daily wear comfort", "Soft compression"],
+      },
+      {
+        name: "High Rise Shaper Brief",
+        slug: "high-rise-shaper-brief",
+        image: "/assets/629-update/shaping-shorts-2.png",
+        images: [
+          "/assets/629-update/shaping-shorts-2.png",
+          "/assets/requested-products/bodysuit.jpg",
+          "/assets/requested-products/waist-trainer.jpg",
+          "/assets/requested-products/shapewear-set.jpg",
+          "/assets/requested-products/shaping-shorts.jpg",
+          "/assets/629-update/shaping-shorts-1.png",
+          "/assets/629-update/shaping-shorts-3.png",
+        ],
+        summary: "High rise shaper brief with smooth waistband direction and private label color options.",
+        highlights: ["High rise fit", "Smooth waistband", "Color planning"],
+      },
+      {
+        name: "Firm Support Shaping Shorts",
+        slug: "firm-support-shaping-shorts",
+        image: "/assets/629-update/shaping-shorts-3.png",
+        images: [
+          "/assets/629-update/shaping-shorts-3.png",
+          "/assets/requested-products/bodysuit.jpg",
+          "/assets/requested-products/waist-trainer.jpg",
+          "/assets/requested-products/shapewear-set.jpg",
+          "/assets/requested-products/shaping-shorts.jpg",
+          "/assets/629-update/shaping-shorts-1.png",
+          "/assets/629-update/shaping-shorts-2.png",
+        ],
+        summary:
+          "Firm support shaping shorts for body smoothing collections, support zones, and OEM customization.",
+        highlights: ["Firm support", "Body smoothing", "OEM customization"],
       },
     ],
   },
@@ -387,12 +503,74 @@ export const productDetails = productFamilies.flatMap((family) =>
 
 export const processSteps = [
   "Send Inquiry",
-  "Confirm Design",
+  "Confirm Specifications",
   "Sample Development",
   "Sample Approval",
   "Mass Production",
   "Quality Inspection",
-  "Shipment",
+  "Packing & Shipment",
+];
+
+export const oemProcessSteps = [
+  {
+    title: "Send Inquiry",
+    text: "Share your tech pack, reference sample, artwork, or product requirements.",
+  },
+  {
+    title: "Confirm Specifications",
+    text: "Confirm fabric, accessories, sizing, logo, packaging, MOQ, price, and delivery schedule.",
+  },
+  {
+    title: "Sample Development",
+    text: "Our team develops samples according to your specifications.",
+  },
+  {
+    title: "Sample Approval",
+    text: "Review and approve the sample before production.",
+  },
+  {
+    title: "Mass Production",
+    text: "Bulk production begins after sample approval.",
+  },
+  {
+    title: "Quality Inspection",
+    text: "Conduct in-line and final inspections to ensure consistent quality.",
+  },
+  {
+    title: "Packing & Shipment",
+    text: "Products are packed according to your branding requirements and shipped worldwide.",
+  },
+];
+
+export const odmProcessSteps = [
+  {
+    title: "Send Inquiry",
+    text: "Tell us your product idea, target market, and business requirements.",
+  },
+  {
+    title: "Product Recommendation",
+    text: "We recommend suitable styles, fabrics, collections, and manufacturing solutions.",
+  },
+  {
+    title: "Design Customization",
+    text: "Customize logos, colors, labels, packaging, and product details.",
+  },
+  {
+    title: "Sample Development",
+    text: "We produce customized samples for your review.",
+  },
+  {
+    title: "Sample Approval",
+    text: "Approve the final sample before mass production.",
+  },
+  {
+    title: "Mass Production",
+    text: "Bulk production begins after sample confirmation.",
+  },
+  {
+    title: "Quality Inspection & Shipment",
+    text: "Products pass strict quality inspection before packing and worldwide delivery.",
+  },
 ];
 
 export const faqItems = [
@@ -437,6 +615,13 @@ export const values = [
 ];
 
 export const blogPosts = [
+  {
+    title: "How to Choose a Reliable Underwear Manufacturer in China (2026 Guide)",
+    category: "OEM & ODM Guide",
+    excerpt:
+      "A 2026 guide to evaluating production capacity, quality control, OEM/ODM services, MOQ, certifications, and delivery performance.",
+    href: "/blog/how-to-choose-a-reliable-underwear-manufacturer-in-china",
+  },
   {
     title: "How to Start a Private Label Underwear Brand",
     category: "Private Label Guide",

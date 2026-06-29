@@ -56,7 +56,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
       <div className="admin-main">
         <header>
           <div>
-            <span>Hong Kong Winsun Co., Limited</span>
+            <span>Hong Kong Winsun Co., Ltd.</span>
             <h1>{title}</h1>
           </div>
           <Link href="/" target="_blank">

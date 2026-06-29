@@ -1,191 +1,188 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Factory, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  Award,
+  Building2,
+  Factory,
+  Globe2,
+  Instagram,
+  Mail,
+  MessageCircle,
+  PackageCheck,
+  PlayCircle,
+  Send,
+  Sparkles,
+  UsersRound,
+} from "lucide-react";
 import { CtaBand } from "@/components/CtaBand";
 import { GsapProvider } from "@/components/GsapProvider";
 import { GlobalSalesNetwork } from "@/components/GlobalSalesNetwork";
 import { SectionHeading } from "@/components/SectionHeading";
-import {
-  company,
-  factoryStrength,
-  faqItems,
-  processSteps,
-  quickFacts,
-  updatedMarketSupport,
-  whyChooseWinsun,
-} from "@/lib/site-data";
-import { getSiteCoreProducts } from "@/lib/site-cms";
+import { company, faqItems } from "@/lib/site-data";
 
-export default async function Home() {
-  const products = await getSiteCoreProducts();
+const heroStats = [
+  { value: "2015", label: "Established", icon: Award },
+  { value: "150+", label: "Skilled Workers", icon: UsersRound },
+  { value: "5,000 sqm", label: "Factory Area", icon: Building2 },
+  { value: "20", label: "Production Lines", icon: Factory },
+  { value: "500K+", label: "Pieces / Month", icon: PackageCheck },
+  { value: "80+", label: "Export Markets", icon: Globe2 },
+];
+
+const homeProcessSteps = [
+  {
+    number: "01.",
+    title: "Design & Development",
+    image: "/assets/629-update/process-design-development.png",
+  },
+  {
+    number: "02.",
+    title: "Fabric & Accessories",
+    image: "/assets/629-update/process-fabric-accessories.png",
+  },
+  {
+    number: "03.",
+    title: "Production",
+    image: "/assets/629-update/process-production.png",
+  },
+  {
+    number: "04.",
+    title: "Quality Control",
+    image: "/assets/629-update/process-quality-control.png",
+  },
+  {
+    number: "05.",
+    title: "Packaging & Delivery",
+    image: "/assets/629-update/process-packaging-delivery.png",
+  },
+];
+
+export default function Home() {
+  const phoneHref = `tel:${company.whatsAppPrimary.replace(/[^\d+]/g, "")}`;
+  const heroContacts = [
+    { label: "INS", value: company.instagram, href: phoneHref, icon: Instagram },
+    { label: "WhatsApp", value: company.whatsAppPrimary, href: company.whatsAppLink, icon: MessageCircle, external: true },
+    { label: "Telegram", value: company.telegram, href: phoneHref, icon: Send },
+    { label: "Email", value: company.email, href: `mailto:${company.email}`, icon: Mail },
+  ];
 
   return (
     <GsapProvider>
-      <section className="hero">
-        <div className="hero-media" aria-hidden="true">
+      <section className="hero home-hero">
+        <div className="home-hero__media" aria-hidden="true">
           <Image
             src="/assets/hero-winsun-showroom.jpg"
             alt=""
             fill
             sizes="100vw"
             priority
-            className="hero-image"
+            className="home-hero__background"
           />
-          <div className="hero-overlay" />
+          <div className="home-hero__overlay" />
         </div>
-        <div className="hero-content">
-          <div className="hero-copy">
-            <span className="eyebrow">Underwear Manufacturer in China</span>
-            <h1 className="hero-title" aria-label={company.name}>
-              <span>Hong Kong Winsun</span>
-              <span>Co., Limited</span>
-            </h1>
-            <p>
-              OEM and ODM bra, panty, shapewear, thermal wear, and private label underwear factory
-              support for global B2B buyers.
-            </p>
-            <div className="hero-actions">
-              <Link href="/contact" className="button button--primary">
-                Send Inquiry
-                <ArrowRight size={18} />
-              </Link>
-              <Link href="/manufacturing" className="button button--ghost">
-                <Factory size={18} />
-                View Factory
-              </Link>
+
+        <div className="home-hero__content">
+          <div className="home-hero__shell">
+            <div className="home-hero__copy" data-animate="fade-up">
+              <span className="eyebrow">Professional</span>
+              <h1 className="hero-title" aria-label="Lingerie and underwear OEM/ODM manufacturer">
+                <span>Lingerie & Underwear</span>
+                <span>OEM/ODM Manufacturer</span>
+              </h1>
+              <p>
+                A practical underwear factory partner for bras, panties, shapewear, thermal wear,
+                loungewear, and private label programs.
+              </p>
+              <div className="hero-actions">
+                <Link href="/contact" className="button button--primary">
+                  Get A Quote
+                  <ArrowRight size={18} />
+                </Link>
+                <Link href="/manufacturing#factory-video" className="button button--ghost">
+                  <PlayCircle size={18} />
+                  Watch Video
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="hero-card" data-animate="fade-up">
-            <span>Export Markets</span>
-            <strong>Russia / Europe / Global Buyers</strong>
-            <p>One-stop sourcing support from development to export-ready packaging.</p>
+
+          <div className="home-hero__contact-row" aria-label="Winsun contact methods" data-animate="fade-up">
+            {heroContacts.map((item) => {
+              const Icon = item.icon;
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noreferrer" : undefined}
+                  className="home-hero__contact-item"
+                >
+                  <span className="home-hero__contact-icon">
+                    <Icon size={20} />
+                  </span>
+                  <span>
+                    <strong>{item.label}</strong>
+                    <small>{item.value}</small>
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+
+          <div className="home-hero__stats" aria-label="Winsun factory quick facts" data-animate="fade-up">
+            {heroStats.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.label} className="home-hero__stat">
+                  <Icon size={22} />
+                  <span>
+                    <strong>{item.value}</strong>
+                    <small>{item.label}</small>
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <section className="home-about split-section" id="about-winsun">
-        <div className="split-media">
-          <Image
-            src="/assets/about-winsun-showroom-sample-office.jpg"
-            alt="Winsun sample display office"
-            fill
-            sizes="(min-width: 900px) 50vw, 100vw"
-          />
-        </div>
-        <div className="split-copy" data-animate="fade-up">
-          <span className="eyebrow">About Winsun</span>
-          <h2>Underwear OEM & ODM partner for global private label buyers.</h2>
-          <p>
-            Established in 2015, Hong Kong Winsun Co., Limited connects overseas buyers with
-            practical underwear development, production coordination, quality follow-up, packaging,
-            and export service.
-          </p>
-          <p>{updatedMarketSupport}</p>
-        </div>
-      </section>
-
-      <section className="quick-facts-band" aria-label="Quick facts">
-        <div className="quick-facts-card" data-animate="fade-up">
-          <span className="eyebrow">Quick Facts</span>
-          <div className="quick-facts-grid">
-            {quickFacts.map((item) => (
-              <div key={item.item}>
-                <span>{item.item}</span>
-                <strong>{item.details}</strong>
-              </div>
+      <section className="home-process-showcase" aria-labelledby="home-process-title">
+        <div className="home-process-showcase__inner">
+          <div className="home-process-intro" data-animate="fade-up">
+            <span className="eyebrow">OEM / ODM Service</span>
+            <h2 id="home-process-title">One-Stop Solution for Your Brand</h2>
+            <p>
+              We provide professional OEM/ODM services from design, sampling, production to
+              delivery. Help your brand grow faster and easier.
+            </p>
+            <Link href="/oem-odm" className="button button--primary">
+              Learn More
+              <ArrowRight size={18} />
+            </Link>
+          </div>
+          <div className="home-process-grid" data-animate="fade-up">
+            {homeProcessSteps.map((step) => (
+              <article className="home-process-card" key={step.title}>
+                <div className="home-process-card__image">
+                  <Image
+                    src={step.image}
+                    alt={step.title}
+                    fill
+                    sizes="(min-width: 1100px) 18vw, (min-width: 760px) 33vw, 100vw"
+                  />
+                </div>
+                <h3>
+                  <span>{step.number}</span>
+                  {step.title}
+                </h3>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section">
-        <SectionHeading
-          eyebrow="Core Categories"
-          title="B2B underwear programs for private labels, importers, and retail buyers."
-          text="Winsun focuses on practical product development, mature production coordination, and market-ready assortments for overseas clients."
-          align="center"
-        />
-        <div className="product-grid">
-          {products.map((item) => {
-            const Icon = item.icon;
-            return (
-              <Link href="/products" className="product-card" key={item.title} data-animate="fade-up">
-                <div className="product-card__image">
-                  <Image src={item.image} alt={item.title} fill sizes="(min-width: 900px) 33vw, 100vw" />
-                </div>
-                <div className="product-card__body">
-                  <Icon size={22} />
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="section section--muted">
-        <SectionHeading
-          eyebrow="Factory Strength"
-          title="Manufacturing resources for repeat underwear supply programs."
-          text="Winsun combines practical factory coordination, experienced workers, flexible lines, and export service for B2B buyers."
-          align="center"
-        />
-        <div className="strength-grid">
-          {factoryStrength.map((item) => {
-            const Icon = item.icon;
-            return (
-              <article className="strength-card" key={item.label} data-animate="fade-up">
-                <Icon size={22} />
-                <strong>{item.value}</strong>
-                <span>{item.label}</span>
-                <p>{item.text}</p>
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="section why-section">
-        <SectionHeading
-          eyebrow="Why Choose Winsun"
-          title="Factory-direct support for private label underwear buyers."
-          align="center"
-        />
-        <div className="why-grid">
-          {whyChooseWinsun.map((item) => {
-            const Icon = item.icon;
-            return (
-              <article key={item.title} data-animate="fade-up">
-                <Icon size={22} />
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
       <GlobalSalesNetwork />
-
-      <section className="section">
-        <SectionHeading
-          eyebrow="OEM Process"
-          title="How We Work"
-          text="Buyers can start with a tech pack, reference sample, artwork, or a target product range."
-          align="center"
-        />
-        <div className="timeline">
-          {processSteps.map((step, index) => (
-            <div className="timeline-step" key={step} data-animate="fade-up">
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <p>{step}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <section className="section section--muted faq-section">
         <SectionHeading
@@ -204,19 +201,19 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="section image-marquee" aria-label="Factory scenes">
-        <div className="marquee-track">
-          {["office.jpg", "sewing-workshop.png", "showroom.png", "warehouse.png", "knitting-room.png"].map(
-            (image) => (
-              <div className="marquee-image" key={image}>
-                <Image src={`/assets/${image}`} alt="" fill sizes="360px" />
-              </div>
-            ),
-          )}
+      <section className="section showroom-feature" aria-label="Product showroom">
+        <div className="showroom-feature__image" data-animate="reveal">
+          <Image src="/assets/showroom.png" alt="Winsun product showroom" fill sizes="(min-width: 900px) 48vw, 100vw" />
         </div>
-        <div className="marquee-caption" data-animate="fade-up">
-          <Sparkles size={20} />
-          <span>Office / Workshop / Showroom / Warehouse / Knitting Room</span>
+        <div className="showroom-feature__copy" data-animate="fade-up">
+          <Sparkles size={22} />
+          <span className="eyebrow">Factory Scene</span>
+          <h2>Product Showroom</h2>
+          <p>
+            Our showroom showcases a wide range of bras, panties, shapewear, loungewear, and
+            seamless underwear, allowing customers to review product quality, materials, designs,
+            and customization options in one place.
+          </p>
         </div>
       </section>
 

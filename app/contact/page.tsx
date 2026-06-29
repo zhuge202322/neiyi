@@ -1,4 +1,4 @@
-import { Mail, MapPin, MessageCircle } from "lucide-react";
+import { AtSign, Mail, MapPin, MessageCircle, Send } from "lucide-react";
 import { GsapProvider } from "@/components/GsapProvider";
 import { InquiryForm } from "@/components/InquiryForm";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -24,7 +24,8 @@ export default async function ContactPage() {
       <section className="contact-section">
         <div className="contact-info" data-animate="fade-up">
           <span className="eyebrow">Get In Touch</span>
-          <h2>Hong Kong Winsun Co., Limited</h2>
+          <h2>{company.name}</h2>
+          {company.chineseName ? <p className="contact-company-cn">{company.chineseName}</p> : null}
           <div className="contact-line">
             <MapPin size={20} />
             <p>{company.address}</p>
@@ -38,6 +39,14 @@ export default async function ContactPage() {
             <p>
               <a href={`mailto:${company.email}`}>{company.email}</a>
             </p>
+          </div>
+          <div className="contact-line">
+            <AtSign size={20} />
+            <p>Instagram: {company.instagram}</p>
+          </div>
+          <div className="contact-line">
+            <Send size={20} />
+            <p>Telegram: {company.telegram}</p>
           </div>
           <div className="contact-panel">
             <strong>Recommended inquiry details</strong>

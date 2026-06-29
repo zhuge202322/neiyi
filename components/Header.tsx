@@ -38,8 +38,11 @@ export function Header() {
   return (
     <header className={`site-header ${scrolled || forceSolid ? "site-header--solid" : ""}`}>
       <Link href={withLocale("/", locale)} className="brand" aria-label={`${company.name} home`}>
-        <Image src="/assets/winsun-logo.png" alt="" width={128} height={72} priority />
-        <span>{company.name}</span>
+        <Image src="/assets/629-update/winsun-mark-transparent.png" alt="" width={120} height={80} priority />
+        <span>
+          <strong>{company.chineseName}</strong>
+          <small>{company.name}</small>
+        </span>
       </Link>
 
       <nav className="desktop-nav" aria-label="Primary navigation">

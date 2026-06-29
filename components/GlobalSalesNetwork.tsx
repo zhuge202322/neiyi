@@ -40,53 +40,42 @@ const markets: Market[] = [
       "A priority market for value-focused underwear, cold-weather base layers, and replenishment programs.",
   },
   {
-    id: "germany",
-    city: "Berlin",
-    country: "Germany",
-    region: "Europe",
-    lat: 52.52,
-    lng: 13.405,
-    focus: "Private label programs",
+    id: "kazakhstan",
+    city: "Almaty",
+    country: "Kazakhstan",
+    region: "Central Asia",
+    lat: 43.2389,
+    lng: 76.8897,
+    focus: "Importer and wholesale programs",
     description:
-      "Support for EU buyers sourcing practical knitted underwear, bras, panties, and loungewear ranges.",
+      "Support for underwear and thermal wear importers serving Central Asian retail and wholesale channels.",
   },
   {
-    id: "france",
-    city: "Paris",
-    country: "France",
-    region: "Western Europe",
-    lat: 48.8566,
-    lng: 2.3522,
+    id: "belarus",
+    city: "Minsk",
+    country: "Belarus",
+    region: "Europe",
+    lat: 53.9006,
+    lng: 27.559,
+    focus: "Private label and replenishment",
+    description:
+      "Buyer support for practical underwear ranges, repeat orders, and export-ready packing requirements.",
+  },
+  {
+    id: "europe",
+    city: "Europe",
+    country: "Europe",
+    region: "European Market",
+    lat: 50.1109,
+    lng: 8.6821,
     focus: "Design-led assortments",
     description:
-      "Sample-based and ODM development for buyers who need comfort, fit, color planning, and retail packaging.",
-  },
-  {
-    id: "poland",
-    city: "Warsaw",
-    country: "Poland",
-    region: "Central Europe",
-    lat: 52.2297,
-    lng: 21.0122,
-    focus: "Distribution-ready supply",
-    description:
-      "Production planning and export support for regional importers and wholesale distribution programs.",
-  },
-  {
-    id: "united-kingdom",
-    city: "London",
-    country: "United Kingdom",
-    region: "Northern Europe",
-    lat: 51.5072,
-    lng: -0.1276,
-    focus: "Retail sourcing",
-    description:
-      "Buyer-friendly development for core underwear, shapewear, and loungewear programs with packaging needs.",
+      "OEM and ODM development for European buyers needing bras, panties, shapewear, loungewear, and retail packaging.",
   },
   {
     id: "united-states",
-    city: "Los Angeles",
-    country: "United States",
+    city: "USA",
+    country: "USA",
     region: "North America",
     lat: 34.0522,
     lng: -118.2437,
@@ -95,19 +84,20 @@ const markets: Market[] = [
       "Long-distance sourcing support for underwear, shapewear, and loungewear importers seeking private label supply.",
   },
   {
-    id: "uae",
-    city: "Dubai",
-    country: "United Arab Emirates",
-    region: "Middle East",
-    lat: 25.2048,
-    lng: 55.2708,
-    focus: "Regional trading",
+    id: "southeast-asia",
+    city: "Singapore",
+    country: "Southeast Asia",
+    region: "Asia Pacific",
+    lat: 1.3521,
+    lng: 103.8198,
+    focus: "Regional retail and trading",
     description:
-      "Export-ready product coordination for trading companies and regional buyers serving multi-market channels.",
+      "Flexible OEM and ODM support for Southeast Asian buyers, trading companies, and private labels.",
   },
 ];
 
 const hub = markets[0];
+const exportMarkets = markets.filter((market) => market.id !== "hong-kong");
 
 function latLngToVector3(lat: number, lng: number, radius = 2) {
   const phi = THREE.MathUtils.degToRad(90 - lat);
@@ -402,15 +392,14 @@ export function GlobalSalesNetwork() {
   return (
     <section className="global-network">
       <div className="network-copy" data-animate="fade-up">
-        <span className="eyebrow">{"// Global Reach"}</span>
-        <h2>Marketing network across priority underwear sourcing markets.</h2>
+        <span className="eyebrow">Global Export</span>
+        <h2>Serving 80+ Private Labels Worldwide</h2>
         <p>
-          Click a country, city, or glowing point on the globe. The globe rotates to the selected
-          market and shows the export role from our Hong Kong trade hub.
+          Trusted by global brands and importers with reliable OEM & ODM manufacturing services.
         </p>
 
         <div className="network-list" aria-label="Sales network locations">
-          {markets.map((market) => (
+          {exportMarkets.map((market) => (
             <button
               key={market.id}
               type="button"

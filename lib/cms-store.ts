@@ -83,10 +83,13 @@ export function createDefaultCmsData(): CmsData {
   return {
     contact: {
       name: company.name,
+      chineseName: company.chineseName,
       shortName: company.shortName,
       established: company.established,
       address: company.address,
       email: company.email,
+      instagram: company.instagram,
+      telegram: company.telegram,
       whatsApp: company.whatsApp,
       whatsAppPrimary: company.whatsAppPrimary,
       whatsAppLink: company.whatsAppLink,
@@ -118,7 +121,7 @@ export function createDefaultCmsData(): CmsData {
             name: product.name,
             slug: product.slug,
             image: product.image,
-            images: [product.image],
+            images: product.images?.length ? product.images : [product.image],
             summary: product.summary,
             highlights: product.highlights,
             featured: productIndex === 0,
@@ -139,10 +142,13 @@ export function normalizeCmsData(input: Partial<CmsData> | null | undefined): Cm
   return {
     contact: {
       name: String(contact.name || fallback.contact.name),
+      chineseName: String(contact.chineseName || fallback.contact.chineseName || ""),
       shortName: String(contact.shortName || fallback.contact.shortName),
       established: String(contact.established || fallback.contact.established),
       address: String(contact.address || fallback.contact.address),
       email: String(contact.email || fallback.contact.email),
+      instagram: String(contact.instagram || fallback.contact.instagram || ""),
+      telegram: String(contact.telegram || fallback.contact.telegram || ""),
       whatsApp: stringList(contact.whatsApp, fallback.contact.whatsApp),
       whatsAppPrimary: String(contact.whatsAppPrimary || stringList(contact.whatsApp, fallback.contact.whatsApp)[0] || ""),
       whatsAppLink: String(contact.whatsAppLink || fallback.contact.whatsAppLink),

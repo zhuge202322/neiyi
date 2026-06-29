@@ -1,10 +1,11 @@
 import Image from "next/image";
-import { ArrowRight, ClipboardCheck, FileText, Package, PenTool, Shirt, Truck } from "lucide-react";
+import { ArrowRight, ClipboardCheck, FileText, PenTool, Shirt } from "lucide-react";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { GsapProvider } from "@/components/GsapProvider";
+import { OemOdmProcess } from "@/components/OemOdmProcess";
 import { SectionHeading } from "@/components/SectionHeading";
-import { capabilities, processSteps } from "@/lib/site-data";
+import { capabilities } from "@/lib/site-data";
 
 const serviceModes = [
   {
@@ -33,6 +34,34 @@ const quoteNeeds = [
   "Requested sample and delivery timeline",
 ];
 
+const productionWorkflow = [
+  {
+    title: "Design & Development",
+    image: "/assets/629-update/process-design-development.png",
+    text: "Review product ideas, samples, drawings, and buyer requirements before sampling.",
+  },
+  {
+    title: "Fabric & Accessories",
+    image: "/assets/629-update/process-fabric-accessories.png",
+    text: "Coordinate fabrics, trims, colors, labels, and packaging details around the target product.",
+  },
+  {
+    title: "Production",
+    image: "/assets/629-update/process-production.png",
+    text: "Arrange cutting, sewing, line follow-up, and production progress for confirmed orders.",
+  },
+  {
+    title: "Quality Control",
+    image: "/assets/629-update/process-quality-control.png",
+    text: "Inspect workmanship, measurements, appearance, and packing details before shipment.",
+  },
+  {
+    title: "Packaging & Delivery",
+    image: "/assets/629-update/process-packaging-delivery.png",
+    text: "Prepare private label packing, cartons, warehouse coordination, and worldwide delivery.",
+  },
+];
+
 export default function OemOdmPage() {
   return (
     <GsapProvider>
@@ -59,6 +88,42 @@ export default function OemOdmPage() {
               </article>
             );
           })}
+        </div>
+      </section>
+
+      <section className="section section--muted oem-odm-process-section">
+        <div className="dual-process-grid">
+          <OemOdmProcess
+            type="OEM"
+            intro="Buyers can start with a tech pack, reference sample, artwork, or an existing product."
+          />
+          <OemOdmProcess
+            type="ODM"
+            intro="Buyers can start with an idea, target market, or product concept—we handle the rest."
+          />
+        </div>
+      </section>
+
+      <section className="section visual-process-section">
+        <SectionHeading
+          eyebrow="Development To Delivery"
+          title="A clear workflow from product concept to export-ready packaging."
+          text="These five production stages match the latest process direction and help buyers understand how OEM and ODM projects move through our factory support system."
+          align="center"
+        />
+        <div className="visual-process-grid">
+          {productionWorkflow.map((item, index) => (
+            <article className="visual-process-card" key={item.title} data-animate="fade-up">
+              <div className="visual-process-card__image">
+                <Image src={item.image} alt={item.title} fill sizes="(min-width: 900px) 20vw, 100vw" />
+              </div>
+              <div className="visual-process-card__body">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h2>{item.title}</h2>
+                <p>{item.text}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -111,21 +176,6 @@ export default function OemOdmPage() {
               <span>{item}</span>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="shipment-flow">
-          {processSteps.map((item, index) => {
-            const Icon = index < 2 ? ClipboardCheck : index < 4 ? Package : Truck;
-            return (
-              <div key={item} data-animate="fade-up">
-                <Icon size={20} />
-                <span>{index + 1}</span>
-                <p>{item}</p>
-              </div>
-            );
-          })}
         </div>
       </section>
 

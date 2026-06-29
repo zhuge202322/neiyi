@@ -50,6 +50,31 @@ export const ruText: Record<string, string> = {
   Arabic: "Арабский",
   "Chat on WhatsApp": "Написать в WhatsApp",
 
+  Professional: "Профессионально",
+  "Lingerie & Underwear": "Нижнее белье",
+  "OEM/ODM Manufacturer": "OEM/ODM производитель",
+  "Lingerie and underwear OEM/ODM manufacturer": "OEM/ODM производитель нижнего белья",
+  "A practical underwear factory partner for bras, panties, shapewear, thermal wear, loungewear, and private label programs.":
+    "Практичный фабричный партнер для бюстгальтеров, трусов, корректирующего белья, термобелья, домашней одежды и private label программ.",
+  "Get A Quote": "Получить предложение",
+  "Watch Video": "Смотреть видео",
+  "Winsun lingerie and underwear product display": "Демонстрация продукции Winsun",
+  "Winsun contact methods": "Контакты Winsun",
+  Telegram: "Telegram",
+  "Skilled Workers": "Опытные сотрудники",
+  "Factory Area": "Площадь фабрики",
+  "Production Lines": "Производственные линии",
+  "Pieces / Month": "Штук / месяц",
+  "Winsun factory quick facts": "Краткие данные фабрики Winsun",
+  "One-Stop Solution for Your Brand": "Комплексное решение для вашего бренда",
+  "We provide professional OEM/ODM services from design, sampling, production to delivery. Help your brand grow faster and easier.":
+    "Мы предоставляем профессиональные OEM/ODM услуги от дизайна, образцов и производства до доставки, помогая вашему бренду расти быстрее и проще.",
+  "Learn More": "Подробнее",
+  "Design & Development": "Дизайн и разработка",
+  "Fabric & Accessories": "Ткани и фурнитура",
+  Production: "Производство",
+  "Packaging & Delivery": "Упаковка и доставка",
+
   "Underwear Manufacturer in China": "Производитель нижнего белья в Китае",
   "OEM and ODM bra, panty, shapewear, thermal wear, and private label underwear factory support for global B2B buyers.":
     "OEM и ODM производство бюстгальтеров, трусов, корректирующего белья, термобелья и private label для международных B2B покупателей.",

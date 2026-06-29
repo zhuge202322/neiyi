@@ -5,7 +5,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { GsapProvider } from "@/components/GsapProvider";
 import { SectionHeading } from "@/components/SectionHeading";
 import { certifications, quickFacts } from "@/lib/site-data";
-import { getSiteCoreProducts, getSiteProductFamilies } from "@/lib/site-cms";
+import { getSiteProductFamilies } from "@/lib/site-cms";
 
 const productSupport = [
   "Private label development",
@@ -17,20 +17,17 @@ const productSupport = [
 ];
 
 export default async function ProductsPage() {
-  const [productFamilies, products] = await Promise.all([
-    getSiteProductFamilies(),
-    getSiteCoreProducts(),
-  ]);
+  const productFamilies = await getSiteProductFamilies();
 
   return (
     <GsapProvider>
       <section className="page-hero page-hero--products">
         <div>
           <span className="eyebrow">Product Range</span>
-          <h1>OEM & ODM bra, panty, shapewear, and thermal wear manufacturing.</h1>
+          <h1>OEM & ODM bras, panties, and shaping shorts manufacturing.</h1>
           <p>
-            From essential underwear to structured shapewear and seasonal thermal sets, Winsun
-            supports private label buyers with practical sampling and production execution.
+            From everyday bras and panties to supportive shaping shorts, Winsun supports private
+            label buyers with practical sampling and production execution.
           </p>
         </div>
       </section>
@@ -67,34 +64,6 @@ export default async function ProductsPage() {
               </div>
             </section>
           ))}
-        </div>
-      </section>
-
-      <section className="section section--muted">
-        <SectionHeading
-          eyebrow="Core Programs"
-          title="Flexible category support for buyer-led product planning."
-          align="center"
-        />
-        <div className="catalog-grid">
-          {products.map((item) => {
-            const Icon = item.icon;
-            return (
-              <article className="catalog-card" key={item.title} data-animate="fade-up">
-                <div className="catalog-card__image">
-                  <Image src={item.image} alt={item.title} fill sizes="(min-width: 900px) 33vw, 100vw" />
-                </div>
-                <div className="catalog-card__content">
-                  <Icon size={24} />
-                  <h2>{item.title}</h2>
-                  <p>{item.description}</p>
-                  <Link href="/contact">
-                    Discuss This Category <ArrowRight size={16} />
-                  </Link>
-                </div>
-              </article>
-            );
-          })}
         </div>
       </section>
 

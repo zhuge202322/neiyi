@@ -37,8 +37,9 @@ export function GsapProvider({ children }: { children: ReactNode }) {
       gsap.utils.toArray<HTMLElement>("[data-animate='reveal']").forEach((el) => {
         gsap.fromTo(
           el,
-          { clipPath: "inset(0 0 100% 0)" },
+          { autoAlpha: 1, clipPath: "inset(0 0 100% 0)" },
           {
+            autoAlpha: 1,
             clipPath: "inset(0 0 0% 0)",
             duration: 1.1,
             ease: "power4.out",

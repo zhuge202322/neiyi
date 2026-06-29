@@ -1,9 +1,12 @@
 export type CmsContact = {
   name: string;
+  chineseName?: string;
   shortName: string;
   established: string;
   address: string;
   email: string;
+  instagram?: string;
+  telegram?: string;
   whatsApp: string[];
   whatsAppPrimary: string;
   whatsAppLink: string;
