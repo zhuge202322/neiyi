@@ -64,28 +64,17 @@ export function Header() {
             <span>{locale === "ru" ? "RU" : "EN"}</span>
           </button>
           <div className="language-menu__panel">
-            {languageOptions.map((item) => {
-              if (item.code === "EN" || item.code === "RU") {
-                return (
-                  <Link
-                    key={item.code}
-                    href={languageHref(item.code === "RU" ? "ru" : "en")}
-                    className={isActiveLanguage(item.code) ? "active" : ""}
-                    data-locale-switch="true"
-                  >
-                    <strong>{item.code}</strong>
-                    {tr(item.label, locale)}
-                  </Link>
-                );
-              }
-
-              return (
-                <span key={item.code} aria-disabled="true">
-                  <strong>{item.code}</strong>
-                  {tr(item.label, locale)}
-                </span>
-              );
-            })}
+            {languageOptions.map((item) => (
+              <Link
+                key={item.code}
+                href={languageHref(item.code === "RU" ? "ru" : "en")}
+                className={isActiveLanguage(item.code) ? "active" : ""}
+                data-locale-switch="true"
+              >
+                <strong>{item.code}</strong>
+                {tr(item.label, locale)}
+              </Link>
+            ))}
           </div>
         </div>
         <Link href={withLocale("/contact", locale)} className="icon-link" aria-label="Send an inquiry">
@@ -113,22 +102,16 @@ export function Header() {
           </Link>
         ))}
         <div className="mobile-languages">
-          {languageOptions.map((item) =>
-            item.code === "EN" || item.code === "RU" ? (
-              <Link
-                key={item.code}
-                href={languageHref(item.code === "RU" ? "ru" : "en")}
-                className={isActiveLanguage(item.code) ? "active" : ""}
-                data-locale-switch="true"
-              >
-                {item.code}
-              </Link>
-            ) : (
-              <span key={item.code} aria-disabled="true">
-                {item.code}
-              </span>
-            ),
-          )}
+          {languageOptions.map((item) => (
+            <Link
+              key={item.code}
+              href={languageHref(item.code === "RU" ? "ru" : "en")}
+              className={isActiveLanguage(item.code) ? "active" : ""}
+              data-locale-switch="true"
+            >
+              {item.code}
+            </Link>
+          ))}
         </div>
       </div>
     </header>

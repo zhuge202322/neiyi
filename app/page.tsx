@@ -60,9 +60,11 @@ const homeProcessSteps = [
 
 export default function Home() {
   const phoneHref = `tel:${company.whatsAppPrimary.replace(/[^\d+]/g, "")}`;
+  const secondaryPhone = "+86 13926790536";
   const heroContacts = [
     { label: "INS", value: company.instagram, href: phoneHref, icon: Instagram },
     { label: "WhatsApp", value: company.whatsAppPrimary, href: company.whatsAppLink, icon: MessageCircle, external: true },
+    { label: "Phone", value: secondaryPhone, href: `tel:${secondaryPhone.replace(/[^\d+]/g, "")}`, icon: MessageCircle },
     { label: "Telegram", value: company.telegram, href: phoneHref, icon: Send },
     { label: "Email", value: company.email, href: `mailto:${company.email}`, icon: Mail },
   ];

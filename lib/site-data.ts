@@ -30,7 +30,7 @@ export const company = {
   email: "info@winsunhk.com",
   instagram: "+86 19878866771",
   telegram: "+86 19878866771",
-  whatsApp: ["+86 19878866771"],
+  whatsApp: ["+86 19878866771", "+86 13926790536"],
   whatsAppPrimary: "+86 19878866771",
   whatsAppLink: "https://wa.me/8619878866771",
   markets: ["Russia", "Kazakhstan", "Belarus", "Europe", "USA", "Southeast Asia"],
@@ -49,11 +49,6 @@ export const navItems = [
 export const languageOptions = [
   { label: "English", code: "EN" },
   { label: "Russian", code: "RU" },
-  { label: "Kazakh", code: "KZ" },
-  { label: "Belarusian", code: "BE" },
-  { label: "Japanese", code: "JP" },
-  { label: "Korean", code: "KR" },
-  { label: "Arabic", code: "AR" },
 ];
 
 export const updatedMarketSupport =
